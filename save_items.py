@@ -119,7 +119,7 @@ def parse_page(url):
         item['date_extra'] = None
 
     # get tags
-    item['tags'] = [tag.text for tag in soup.select('#page-tags .tags')]
+    item['tags'] = [tag.text.strip() for tag in soup.select('#page-tags .tags')]
         
     return item
 

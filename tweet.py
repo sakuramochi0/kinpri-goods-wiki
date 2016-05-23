@@ -115,8 +115,6 @@ def get_date_description(date):
         date_description = '明日'
     elif delta == 2:
         date_description = '明後日'
-    elif delta == 3:
-        date_description = 'あさって'
     else:
         date_description = ''
     return date_description
