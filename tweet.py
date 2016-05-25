@@ -20,29 +20,45 @@ def tweet_date_items(date):
     # tweet items
     items = get_date_items(date)
     for item in items:
-        item_status = make_item_status(date=date, item=item)
-        tweet(item_status)
+        try:
+            item_status = make_item_status(date=date, item=item)
+            tweet(item_status)
+        except tweepy.TweepError as e:
+            if e.api_code == 186:
+                if item['maker']:
+                    item['maker'] = re.sub(r'\s*?[\(（].+[\)）]', '', item['maker'])
+                    item_status = make_item_status(date=date, item=item)
+                    try:
+                        tweet(item_status)
+                    except tweepy.TweepError as e:
+                        if e.api_code == 186:
+                            item['name'] = re.sub(r'KING OF PRISM by PrettyRhythm', '', item['name'])
+                            item_status = make_item_status(date=date, item=item)
+                            tweet(item_status)
 
 def tweet(status, imgs=[]):
     """
     指定したツイートテキストで、アカウントからツイートする
     """
-    if args.debug:
-        print('-' * 4)
-        print('would tweet:')
-        print(status)
+    # TODO: imgs can be list?
+    if imgs:
+        pass
+    #     api.update_with_media(status=status, filename=imgs)
     else:
-        # TODO: imgs can be list?
-        if imgs:
-            pass
-        #     api.update_with_media(status=status, filename=imgs)
-        else:
-            api.update_status(status=status)
-            print('-' * 4)
-            print('tweeted:')
-            print(status)
+        print('-' * 4)
+        print('tweeting:')
+        print(status)
+        print('({})'.format(status_len(status)))
+        api.update_status(status=status)
+        if not args.debug:
             time.sleep(10)
 
+def status_len(status):
+    dummy_url = 'https://t.co/xxxxxxxxxx'
+    url_regex = re.compile(r'http\S+')
+    status = re.sub(url_regex, dummy_url, status)
+    return len(status)
+            
 def make_num_status(date=None):
     """
     ツイート用に、指定した日付に発売するアイテム数を知らせるツイートテキストを生成する
@@ -55,6 +71,7 @@ def make_num_status(date=None):
 
     # tweet a number of items
     num = db.find({'date': date, 'date_extra': None}).count()
+    print([i['name'] for i in db.find({'date': date, 'date_extra': None})])
     if num:
         status = 'みんな〜、{date_description}{date}は{num}個のグッズが発売されるみたいだぞー。これから紹介するなー。'.format(
             date_description=get_date_description(date), date=format_date(date), num=num
@@ -95,12 +112,18 @@ def make_item_status(item=None, date=None):
         quote = ' ' + item['tweet_urls'][0]
     else:
         quote = ''
+
+    # make maker text
+    if item['maker']:
+        maker = item['maker'] + 'さんから'
+    else:
+        maker = ''
         
     # make status text
-    status = '{date_description}{date}は、{maker}さんから「{name}」が発売されるようだ。詳しくはこれ見とけ〜 {url}{quote}'.format(
+    status = '{date_description}{date}は、{maker}「{name}」が発売されるようだ。詳しくはこれ見とけ〜 {url}{quote}'.format(
         date_description=get_date_description(date),
         date=format_date(date),
-        maker=item['maker'],
+        maker=maker,
         name=item['name'],
         url=item['url'],
         quote=quote,
@@ -186,13 +209,13 @@ if __name__ == '__main__':
      
     # prepare database
     c = MongoClient()
-    if args.debug:
-        db = c.kinpri_goods_wiki_debug.items
-    else:
-        db = c.kinpri_goods_wiki.items
+    db = c.kinpri_goods_wiki.items
      
     # get tweepy api
-    api = get_api('goods_yamada')
+    if args.debug:
+        api = get_api('sakuramochi_pre')
+    else:
+        api = get_api('goods_yamada')
 
     # run command
     
