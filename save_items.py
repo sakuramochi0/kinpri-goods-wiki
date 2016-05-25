@@ -2,6 +2,7 @@
 import re
 import time
 import datetime
+from dateutil.parser import parse
 import argparse
 from urllib.parse import unquote_plus
 from bs4 import BeautifulSoup
@@ -35,7 +36,7 @@ def print_item(item, i=None):
     """
     print('-' * 4)
     if i is not None:
-        print(i)
+        print('#', i)
     for k, v in item.items():
         print('- {}: {}'.format(k,repr(v)))
 
@@ -55,16 +56,15 @@ def parse_page(url):
     analyze the url page and return informations
     """
     item = {}
+    soup = get_soup(url)
+    save_html(soup, url)
 
-    if args.debug:
-        with open('html/' + url.split('/')[-1] + '.html') as f:
-            soup = BeautifulSoup(f.read())
-    else:
-        soup = get_soup(url)
-        save_html(soup, url)
-    soup = soup.select('#page-body')[0]
+    # get page meta data
     item['url'] = url
+    item['updated_time'] = parse(soup.select('meta[name=generated]')[0]['content'])
     
+    soup = soup.select('#page-body')[0]
+
     # get name
     for div in soup.select('div'):
         if div.has_attr('class'):
@@ -95,10 +95,6 @@ def parse_page(url):
     # get release_date
     m = re.search(r'((?:(?:(\d{4})年)?(\d{,2})月(?:(\d{,2})日)?.*?(?:(上|中|下)旬)?.*?)|発売.+?不明)', soup.text)
     if m:
-        # record strings for debug
-        if args.debug:
-            item['raw_date'] = m.groups()
-
         # if release date id '不明'
         if '不明' in m.group(1):
             item['date'] = None
@@ -134,14 +130,10 @@ def save_html(soup, url):
 if __name__ == '__main__':
     # parse args
     parser = argparse.ArgumentParser()
-    parser.add_argument('-d', '--debug', action='store_true')
     args = parser.parse_args()
      
     # prepare database
     c = MongoClient()
-    if args.debug:
-        db = c.kinpri_goods_wiki_debug.items
-    else:
-        db = c.kinpri_goods_wiki.items
+    db = c.kinpri_goods_wiki.items
 
     main()
