@@ -107,6 +107,8 @@ def parse_page(url):
             if not month:
                 month = 1
             if not day:
+                if not extra:
+                    extra = '月'
                 day = 1
             item['date'] = datetime.datetime(year=year, month=month, day=day)
             item['date_extra'] = extra
