@@ -3,23 +3,24 @@ BEGIN:VEVENT
 SUMMARY:[発売日] ビッグレザーストラップ「KING OF PRISM by P
  rettyRhythm」
 DTSTART;VALUE=DATE:20160301
-DESCRIPTION:発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a5%d3%a5%
- c3%a5%b0%a5%ec%a5%b6%a1%bc%a5%b9%a5%c8%a5%e9%a5%c3%a5%d7%a1%d6KING%20OF%20
- PRISM%20by%20PrettyRhythm%a1%d7
+DESCRIPTION:※この商品の発売日は3月となっています。\n
+ 発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a5%d3%a5%c3%a5%b0%a5%
+ ec%a5%b6%a1%bc%a5%b9%a5%c8%a5%e9%a5%c3%a5%d7%a1%d6KING%20OF%20PRISM%20by%2
+ 0PrettyRhythm%a1%d7
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] キャラバックハンガー「KING OF PRISM from Pr
  ettyRhythm」
 DTSTART;VALUE=DATE:20160510
-DESCRIPTION:※この商品の発売日は5月中旬となっています
- 。\n発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a5%ad%a5%e3%a5%e
- 9%a5%d0%a5%c3%a5%af%a5%cf%a5%f3%a5%ac%a1%bc%a1%d6KING%20OF%20PRISM%20from%
- 20PrettyRhythm%a1%d7
+DESCRIPTION:※この商品の発売日は3月となっています。\n
+ 発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a5%ad%a5%e3%a5%e9%a5%
+ d0%a5%c3%a5%af%a5%cf%a5%f3%a5%ac%a1%bc%a1%d6KING%20OF%20PRISM%20from%20Pre
+ ttyRhythm%a1%d7
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM とじコレ アクリルキーチェー
  ンvol.1
-DTSTART;VALUE=DATE:20160602
+DTSTART;VALUE=DATE:20160625
 DESCRIPTION:発売元: ツインクル\nWiki: http://kinprigoods.memo.wiki
  /d/KING%20OF%20PRISM%20%a4%c8%a4%b8%a5%b3%a5%ec%a5%a2%a5%af%a5%ea%a5%eb%a5
  %ad%a1%bc%a5%c1%a5%a7%a1%bc%a5%f3vol%2e1
@@ -53,8 +54,7 @@ DESCRIPTION:発売元: 主婦と生活社・2D☆STAR編集部\nWiki: http
  ://kinprigoods.memo.wiki/d/2D%a1%f9STAR%20Vol%2e4
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[発売日] KING OF PRISM by PrettyRhythm 公式設定資料集(
- 仮)
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm 公式設定資料集
 DTSTART;VALUE=DATE:20160617
 DESCRIPTION:発売元: 一迅社 / ポストメディア編集部\nWiki: h
  ttp://kinprigoods.memo.wiki/d/KING%20OF%20PRISM%20by%20PrettyRhythm%20%b8%
@@ -71,33 +71,32 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm ブリキストラップ
 DTSTART;VALUE=DATE:20160610
-DESCRIPTION:※この商品の発売日は6月中旬となっています
- 。\n発売元: ベルハウス\nWiki: http://kinprigoods.memo.wiki/d/KING
- %20OF%20PRISM%20by%20PrettyRhythm%20%a5%d6%a5%ea%a5%ad%a5%b9%a5%c8%a5%e9%a
- 5%c3%a5%d7
+DESCRIPTION:発売元: ベルハウス\nWiki: http://kinprigoods.memo.wiki
+ /d/KING%20OF%20PRISM%20by%20PrettyRhythm%20%a5%d6%a5%ea%a5%ad%a5%b9%a5%c8%
+ a5%e9%a5%c3%a5%d7
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[発売日] spoon.2Di vol.14
-DTSTART;VALUE=DATE:20160531
-DESCRIPTION:発売元: PREVISION(プレビジョン)\nWiki: http://kinprig
- oods.memo.wiki/d/spoon%2e2Di%20vol%2e14
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm パンフレット
+DTSTART;VALUE=DATE:20160109
+DESCRIPTION:発売元: None\nWiki: http://kinprigoods.memo.wiki/d/KING%20O
+ F%20PRISM%20by%20PrettyRhythm%20%a5%d1%a5%f3%a5%d5%a5%ec%a5%c3%a5%c8
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] アクリルキーホルダー「KING OF PRISM by Pret
  tyRhythm」ブラインド＆BOX
 DTSTART;VALUE=DATE:20160510
-DESCRIPTION:※この商品の発売日は5月中旬となっています
- 。\n発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a5%a2%a5%af%a5%e
- a%a5%eb%a5%ad%a1%bc%a5%db%a5%eb%a5%c0%a1%bc%a1%d6KING%20OF%20PRISM%20from%
- 20PrettyRhythm%a1%d7%a5%d6%a5%e9%a5%a4%a5%f3%a5%c9%a1%f5BOX
+DESCRIPTION:発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a5%a2%a5%
+ af%a5%ea%a5%eb%a5%ad%a1%bc%a5%db%a5%eb%a5%c0%a1%bc%a1%d6KING%20OF%20PRISM%
+ 20from%20PrettyRhythm%a1%d7%a5%d6%a5%e9%a5%a4%a5%f3%a5%c9%a1%f5BOX
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] アクリルキーホルダー「KING OF PRISM from Pr
  ettyRhythm」
 DTSTART;VALUE=DATE:20160201
-DESCRIPTION:発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a5%a2%a5%
- af%a5%ea%a5%eb%a5%ad%a1%bc%a5%db%a5%eb%a5%c0%a1%bc%a1%d6KING%20OF%20PRISM%
- 20by%20PrettyRhythm%a1%d7%a1%caA3%3a2%b7%ee%a1%cb
+DESCRIPTION:※この商品の発売日は2月となっています。\n
+ 発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a5%a2%a5%af%a5%ea%a5%
+ eb%a5%ad%a1%bc%a5%db%a5%eb%a5%c0%a1%bc%a1%d6KING%20OF%20PRISM%20by%20Prett
+ yRhythm%a1%d7%a1%caA3%3a2%b7%ee%a1%cb
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm【こけしとらっぷ
@@ -142,14 +141,6 @@ DESCRIPTION:発売元: Groove Garage (グルーヴカレージ)\nWiki: htt
  %a5%e9%a5%c3%a5%d7
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[発売日] アクリルキーホルダー（プリズムストー
- ン版）
-DTSTART;VALUE=DATE:20160423
-DESCRIPTION:発売元: プリズムストーン\nWiki: http://kinprigoods.
- memo.wiki/d/%a5%a2%a5%af%a5%ea%a5%eb%a5%ad%a1%bc%a5%db%a5%eb%a5%c0%a1%bc%a
- 1%ca%a5%d7%a5%ea%a5%ba%a5%e0%a5%b9%a5%c8%a1%bc%a5%f3%a1%cb
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[発売日] トレーディングラバーストラップ 2nd ス
  テージ
 DTSTART;VALUE=DATE:20160825
@@ -158,19 +149,14 @@ DESCRIPTION:発売元: フリーイング\nWiki: http://kinprigoods.memo.w
  5%c8%a5%e9%a5%c3%a5%d7%202nd%20%a5%b9%a5%c6%a1%bc%a5%b8
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[発売日] ストラップ
-DTSTART;VALUE=DATE:20160116
-DESCRIPTION:発売元: ムービック\nWiki: http://kinprigoods.memo.wiki
- /d/%a5%b9%a5%c8%a5%e9%a5%c3%a5%d7
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[発売日] ぷりっしゅ KING OF PRISM by PrettyRhythm トレ
  ーディングアクリルキーホルダーvol.1
 DTSTART;VALUE=DATE:20160601
-DESCRIPTION:発売元: エクスレア\nWiki: http://kinprigoods.memo.wiki
- /d/%a4%d7%a4%ea%a4%c3%a4%b7%a4%e5%20KING%20OF%20PRISM%20by%20PrettyRhythm%
- 20%a5%c8%a5%ec%a1%bc%a5%c7%a5%a3%a5%f3%a5%b0%a5%a2%a5%af%a5%ea%a5%eb%a5%ad
- %a1%bc%a5%db%a5%eb%a5%c0%a1%bcvol%2e1
+DESCRIPTION:※この商品の発売日は6月となっています。\n
+ 発売元: エクスレア\nWiki: http://kinprigoods.memo.wiki/d/%a4%d7%a4
+ %ea%a4%c3%a4%b7%a4%e5%20KING%20OF%20PRISM%20by%20PrettyRhythm%20%a5%c8%a5%
+ ec%a1%bc%a5%c7%a5%a3%a5%f3%a5%b0%a5%a2%a5%af%a5%ea%a5%eb%a5%ad%a1%bc%a5%db
+ %a5%eb%a5%c0%a1%bcvol%2e1
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm トレーディングメ
@@ -202,19 +188,11 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm　トレーディング
  ハート型缶バッジ vol.1
-DTSTART;VALUE=DATE:20160527
+DTSTART;VALUE=DATE:20160708
 DESCRIPTION:発売元: エイベックス・ピクチャーズ\nWiki: http
  ://kinprigoods.memo.wiki/d/KING%20OF%20PRISM%20by%20PrettyRhythm%a1%a1%a5%
  c8%a5%ec%a1%bc%a5%c7%a5%a3%a5%f3%a5%b0%a5%cf%a1%bc%a5%c8%b7%bf%b4%cc%a5%d0
  %a5%c3%a5%b8%20vol%2e1
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[発売日] KING OF PRISM by PrettyRhythm　高発光名場面缶
- バッジ12種（トレーディング）
-DTSTART;VALUE=DATE:20160625
-DESCRIPTION:発売元: グルーヴガレージ\nWiki: http://kinprigoods.
- memo.wiki/d/%b9%e2%c8%af%b8%f7%cc%be%be%ec%cc%cc%b4%cc%a5%d0%a5%c3%a5%b812
- %bc%ef%a1%ca%a5%c8%a5%ec%a1%bc%a5%c7%a5%a3%a5%f3%a5%b0%a1%cb
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm ぎゅぎゅっと ス
@@ -235,7 +213,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythmトレーディングマ
  イクロファイバーミニタオル
-DTSTART;VALUE=DATE:20160527
+DTSTART;VALUE=DATE:20160610
 DESCRIPTION:発売元: エイベックス・ピクチャーズ\nWiki: http
  ://kinprigoods.memo.wiki/d/KING%20OF%20PRISM%20by%20PrettyRhythm%a5%c8%a5%
  ec%a1%bc%a5%c7%a5%a3%a5%f3%a5%b0%a5%de%a5%a4%a5%af%a5%ed%a5%d5%a5%a1%a5%a4
@@ -266,8 +244,7 @@ DESCRIPTION:発売元: ムービック\nWiki: http://kinprigoods.memo.wiki
  e3%a5%c4
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[発売日] KING OF PRISM by PrettyRhythm【缶バッジポケッ
- トート！】2種
+SUMMARY:[発売日] 缶バッジポケットート！
 DTSTART;VALUE=DATE:20160525
 DESCRIPTION:発売元: Groove Garage (グルーヴガレージ)\nWiki: htt
  p://kinprigoods.memo.wiki/d/KING%20OF%20PRISM%20by%20PrettyRhythm%a1%da%b4
@@ -281,12 +258,6 @@ DESCRIPTION:発売元: オランジュ・ルージュ（グッドスマイ
  ルカンパニー×マックスファクトリー）\nWiki: http://kinpri
  goods.memo.wiki/d/%a4%cd%a4%f3%a4%c9%a4%ed%a4%a4%a4%c9%a4%d7%a4%e9%a4%b9%2
  0%a5%c8%a1%bc%a5%c8%a5%d0%a5%c3%a5%b0
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[発売日] ミニトートバッグ
-DTSTART;VALUE=DATE:20160123
-DESCRIPTION:発売元: ムービック\nWiki: http://kinprigoods.memo.wiki
- /d/%a5%df%a5%cb%a5%c8%a1%bc%a5%c8%a5%d0%a5%c3%a5%b0
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm バトルスーツ（大
@@ -325,8 +296,9 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] スマホカバー for iPhone6
 DTSTART;VALUE=DATE:20160101
-DESCRIPTION:発売元: ムービック\nWiki: http://kinprigoods.memo.wiki
- /d/%a5%b9%a5%de%a5%db%a5%ab%a5%d0%a1%bc%20for%20iPhone6
+DESCRIPTION:※この商品の発売日は1月となっています。\n
+ 発売元: ムービック\nWiki: http://kinprigoods.memo.wiki/d/%a5%b9%a5
+ %de%a5%db%a5%ab%a5%d0%a1%bc%20for%20iPhone6
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] ねんどろいどぷらす ペンケース
@@ -353,24 +325,11 @@ DESCRIPTION:発売元: エンスカイ\nWiki: http://kinprigoods.memo.wiki
  a1%aa%a1%bf%a5%d7%a5%ea%a5%ba%a5%e0%a4%a6%a4%c1%a4%ef
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[発売日] ハート型ペンライト
-DTSTART;VALUE=DATE:20160617
-DESCRIPTION:発売元: None\nWiki: http://kinprigoods.memo.wiki/d/%a5%cf%a
- 1%bc%a5%c8%b7%bf%a5%da%a5%f3%a5%e9%a5%a4%a5%c8
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[発売日] キャラレココースター (A3版：5月発売)
 DTSTART;VALUE=DATE:20160510
-DESCRIPTION:※この商品の発売日は5月中旬となっています
- 。\n発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a5%ad%a5%e3%a5%e
- 9%a5%ec%a5%b3%a5%b3%a1%bc%a5%b9%a5%bf%a1%bc%a1%d6KING%20OF%20PRISM%20by%20
- PrettyRhythm%a1%d7%a5%d6%a5%e9%a5%a4%a5%f3%a5%c9
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[発売日] マグカップ
-DTSTART;VALUE=DATE:20160109
-DESCRIPTION:発売元: ムービック\nWiki: http://kinprigoods.memo.wiki
- /d/%a5%de%a5%b0%a5%ab%a5%c3%a5%d7
+DESCRIPTION:発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a5%ad%a5%
+ e3%a5%e9%a5%ec%a5%b3%a5%b3%a1%bc%a5%b9%a5%bf%a1%bc%a1%d6KING%20OF%20PRISM%
+ 20by%20PrettyRhythm%a1%d7%a5%d6%a5%e9%a5%a4%a5%f3%a5%c9
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm　ルヰがシンに託
@@ -405,11 +364,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] ラバーストラップ KING OF PRISM by PrettyRhythm
   ぎゅぎゅっと
-DTSTART;VALUE=DATE:20160720
-DESCRIPTION:※この商品の発売日は7月下旬となっています
- 。\n発売元: ベルハウス\nWiki: http://kinprigoods.memo.wiki/d/%a5%
- e9%a5%d0%a1%bc%a5%b9%a5%c8%a5%e9%a5%c3%a5%d7%20KING%20OF%20PRISM%20by%20Pr
- ettyRhythm%20%a4%ae%a4%e5%a4%ae%a4%e5%a4%c3%a4%c8
+DTSTART;VALUE=DATE:20160731
+DESCRIPTION:発売元: ベルハウス\nWiki: http://kinprigoods.memo.wiki
+ /d/%a5%e9%a5%d0%a1%bc%a5%b9%a5%c8%a5%e9%a5%c3%a5%d7%20KING%20OF%20PRISM%20
+ by%20PrettyRhythm%20%a4%ae%a4%e5%a4%ae%a4%e5%a4%c3%a4%c8
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm クリアファイル3
@@ -424,7 +382,7 @@ BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm ダイカットステッ
  カー
 DTSTART;VALUE=DATE:20160610
-DESCRIPTION:※この商品の発売日は6月中旬となっています
+DESCRIPTION:※この商品の発売日は7月下旬となっています
  。\n発売元: エンスカイ\nWiki: http://kinprigoods.memo.wiki/d/KING
  %20OF%20PRISM%20by%20PrettyRhythm%20%a5%c0%a5%a4%a5%ab%a5%c3%a5%c8%a5%b9%a
  5%c6%a5%c3%a5%ab%a1%bc%a1%ca%a5%a8%a5%f3%a5%b9%a5%ab%a5%a4%a1%cb
@@ -460,37 +418,29 @@ DESCRIPTION:発売元: タカラトミーアーツ\nWiki: http://kinprigoo
  %e9%a5%c3%a5%b7%a5%e5%a5%ad%a1%bc%a5%db%a5%eb%a5%c0%a1%bc
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[発売日] KING OF PRISM デカキーホルダー キャラプレ
- ver
-DTSTART;VALUE=DATE:20160430
-DESCRIPTION:発売元: コンテンツシード\nWiki: http://kinprigoods.
- memo.wiki/d/KING%20OF%20PRISM%20%a5%c7%a5%ab%a5%ad%a1%bc%a5%db%a5%eb%a5%c0
- %a1%bc%20%a5%ad%a5%e3%a5%e9%a5%d7%a5%ecver
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM アクリルキーホルダー ちびだ
  んず
-DTSTART;VALUE=DATE:20160620
-DESCRIPTION:※この商品の発売日は6月下旬となっています
- 。\n発売元: ホビージャパン\nWiki: http://kinprigoods.memo.wiki/
- d/KING%20OF%20PRISM%20%a5%a2%a5%af%a5%ea%a5%eb%a5%ad%a1%bc%a5%db%a5%eb%a5%
- c0%a1%bc%20%a4%c1%a4%d3%a4%c0%a4%f3%a4%ba
+DTSTART;VALUE=DATE:20160601
+DESCRIPTION:※この商品の発売日は6月となっています。\n
+ 発売元: ホビージャパン\nWiki: http://kinprigoods.memo.wiki/d/KIN
+ G%20OF%20PRISM%20%a5%a2%a5%af%a5%ea%a5%eb%a5%ad%a1%bc%a5%db%a5%eb%a5%c0%a1
+ %bc%20%a4%c1%a4%d3%a4%c0%a4%f3%a4%ba
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm ミニ缶バッチ
 DTSTART;VALUE=DATE:20160610
-DESCRIPTION:※この商品の発売日は6月中旬となっています
- 。\n発売元: ベルハウス\nWiki: http://kinprigoods.memo.wiki/d/KING
- %20OF%20PRISM%20by%20PrettyRhythm%a5%df%a5%cb%b4%cc%a5%d0%a5%c3%a5%c1
+DESCRIPTION:※この商品の発売日は6月となっています。\n
+ 発売元: ベルハウス\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%a5%df%a5%cb%b4%cc%a5%d0%a5%c3%a5%c1
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] 缶バッチ「KING OF PRISM from PrettyRhythm」（A3
  ：5月版）
 DTSTART;VALUE=DATE:20160510
-DESCRIPTION:※この商品の発売日は5月中旬となっています
- 。\n発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%b4%cc%a5%d0%a5%c
- 3%a5%c1%a1%d6KING%20OF%20PRISM%20from%20PrettyRhythm%a1%d7%a5%d6%a5%e9%a5%
- a4%a5%f3%a5%c9%a1%f5BOX
+DESCRIPTION:※この商品の発売日は6月となっています。\n
+ 発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%b4%cc%a5%d0%a5%c3%a5%
+ c1%a1%d6KING%20OF%20PRISM%20from%20PrettyRhythm%a1%d7%a5%d6%a5%e9%a5%a4%a5
+ %f3%a5%c9%a1%f5BOX
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM アクリルバッジ（ブラインド
@@ -524,6 +474,37 @@ SUMMARY:[発売日] Febri Vol.34
 DTSTART;VALUE=DATE:20160409
 DESCRIPTION:発売元: 一迅社\nWiki: http://kinprigoods.memo.wiki/d/Feb
  ri%20Vol%2e34
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM ミニアクリルスタンド（ブラ
+ インド）
+DTSTART;VALUE=DATE:20160521
+DESCRIPTION:発売元: コンテンツシード\nWiki: http://kinprigoods.
+ memo.wiki/d/KING%20OF%20PRISM%20%a5%df%a5%cb%a5%a2%a5%af%a5%ea%a5%eb%a5%b9
+ %a5%bf%a5%f3%a5%c9%a1%ca%a5%d6%a5%e9%a5%a4%a5%f3%a5%c9%a1%cb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm HMM×キンプリ 和服
+ ホログラム缶バッジ
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: HMM\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%20HMM%a1%df%a5%ad%a5%f3%a5%d7%a5%ea%20%cf%c2%
+ c9%fe%a5%db%a5%ed%a5%b0%a5%e9%a5%e0%b4%cc%a5%d0%a5%c3%a5%b8
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm ラフォーレ原宿×
+ キンプリ ミニタオル
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: HMM\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%20%a5%e9%a5%d5%a5%a9%a1%bc%a5%ec%b8%b6%bd%c9%
+ a1%df%a5%ad%a5%f3%a5%d7%a5%ea%20%a5%df%a5%cb%a5%bf%a5%aa%a5%eb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] 美術手帖 2016年7月号
+DTSTART;VALUE=DATE:20160617
+DESCRIPTION:発売元: 美術出版社 美術手帖編集部\nWiki: http:/
+ /kinprigoods.memo.wiki/d/%c8%fe%bd%d1%bc%ea%c4%a1%202016%c7%af7%b7%ee%b9%e
+ 6
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] 劇場版KING OF PRISM by PrettyRhythm Blu-ray Disc / 
@@ -565,11 +546,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm ブリキストラップ
  （第2弾）
-DTSTART;VALUE=DATE:20160720
-DESCRIPTION:※この商品の発売日は7月下旬となっています
- 。\n発売元: ベルハウス\nWiki: http://kinprigoods.memo.wiki/d/KING
- %20OF%20PRISM%20by%20PrettyRhythm%20%a5%d6%a5%ea%a5%ad%a5%b9%a5%c8%a5%e9%a
- 5%c3%a5%d7%a1%ca%c2%e82%c3%c6%a1%cb
+DTSTART;VALUE=DATE:20160731
+DESCRIPTION:発売元: ベルハウス\nWiki: http://kinprigoods.memo.wiki
+ /d/KING%20OF%20PRISM%20by%20PrettyRhythm%20%a5%d6%a5%ea%a5%ad%a5%b9%a5%c8%
+ a5%e9%a5%c3%a5%d7%a1%ca%c2%e82%c3%c6%a1%cb
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] クリアマスコット
@@ -644,10 +624,11 @@ BEGIN:VEVENT
 SUMMARY:[発売日] ぷりっしゅ KING OF PRISM by PrettyRhythm トレ
  ーディングアクリルキーホルダーvol.2
 DTSTART;VALUE=DATE:20160701
-DESCRIPTION:発売元: エクスレア\nWiki: http://kinprigoods.memo.wiki
- /d/%a4%d7%a4%ea%a4%c3%a4%b7%a4%e5%20KING%20OF%20PRISM%20by%20PrettyRhythm%
- 20%a5%c8%a5%ec%a1%bc%a5%c7%a5%a3%a5%f3%a5%b0%a5%a2%a5%af%a5%ea%a5%eb%a5%ad
- %a1%bc%a5%db%a5%eb%a5%c0%a1%bcvol%2e2
+DESCRIPTION:※この商品の発売日は7月となっています。\n
+ 発売元: エクスレア\nWiki: http://kinprigoods.memo.wiki/d/%a4%d7%a4
+ %ea%a4%c3%a4%b7%a4%e5%20KING%20OF%20PRISM%20by%20PrettyRhythm%20%a5%c8%a5%
+ ec%a1%bc%a5%c7%a5%a3%a5%f3%a5%b0%a5%a2%a5%af%a5%ea%a5%eb%a5%ad%a1%bc%a5%db
+ %a5%eb%a5%c0%a1%bcvol%2e2
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] スティックアクリルキーホルダー
@@ -660,11 +641,10 @@ BEGIN:VEVENT
 SUMMARY:[発売日] キングオブプリズム ふぇるとんBIGフェ
  ルトマスコット
 DTSTART;VALUE=DATE:20160610
-DESCRIPTION:※この商品の発売日は6月中旬となっています
- 。\n発売元: ユニオンクリエイティブ\nWiki: http://kinprigood
- s.memo.wiki/d/%a5%ad%a5%f3%a5%b0%a5%aa%a5%d6%a5%d7%a5%ea%a5%ba%a5%e0%20%a4
- %d5%a4%a7%a4%eb%a4%c8%a4%f3BIG%a5%d5%a5%a7%a5%eb%a5%c8%a5%de%a5%b9%a5%b3%a
- 5%c3%a5%c8
+DESCRIPTION:発売元: ユニオンクリエイティブ\nWiki: http://kin
+ prigoods.memo.wiki/d/%a5%ad%a5%f3%a5%b0%a5%aa%a5%d6%a5%d7%a5%ea%a5%ba%a5%e
+ 0%20%a4%d5%a4%a7%a4%eb%a4%c8%a4%f3BIG%a5%d5%a5%a7%a5%eb%a5%c8%a5%de%a5%b9%
+ a5%b3%a5%c3%a5%c8
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] キングオブプリズム ふぇるとんminiアク
@@ -686,7 +666,7 @@ DESCRIPTION:発売元: コンテンツシード\nWiki: http://kinprigoods.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM デカキーホルダー
-DTSTART;VALUE=DATE:20160503
+DTSTART;VALUE=DATE:20160617
 DESCRIPTION:発売元: コンテンツシード\nWiki: http://kinprigoods.
  memo.wiki/d/KING%20OF%20PRISM%20%a5%c7%a5%ab%a5%ad%a1%bc%a5%db%a5%eb%a5%c0
  %a1%bc
@@ -695,10 +675,10 @@ BEGIN:VEVENT
 SUMMARY:[発売日] えるきゅ〜と KING OF PRISM by PrettyRhythm　ビ
  ッグラバーキーホルダー
 DTSTART;VALUE=DATE:20160701
-DESCRIPTION:発売元: エクスレア\nWiki: http://kinprigoods.memo.wiki
- /d/%a4%a8%a4%eb%a4%ad%a4%e5%a1%c1%a4%c8%20KING%20OF%20PRISM%20by%20PrettyR
- hythm%a1%a1%a5%d3%a5%c3%a5%b0%a5%e9%a5%d0%a1%bc%a5%ad%a1%bc%a5%db%a5%eb%a5
- %c0%a1%bc
+DESCRIPTION:※この商品の発売日は7月となっています。\n
+ 発売元: エクスレア\nWiki: http://kinprigoods.memo.wiki/d/%a4%a8%a4
+ %eb%a4%ad%a4%e5%a1%c1%a4%c8%20KING%20OF%20PRISM%20by%20PrettyRhythm%a1%a1%
+ a5%d3%a5%c3%a5%b0%a5%e9%a5%d0%a1%bc%a5%ad%a1%bc%a5%db%a5%eb%a5%c0%a1%bc
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm トレーディングメ
@@ -721,19 +701,19 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] 缶バッジ「KING OF PRISM by PrettyRhythm」（A3
  ：6月版）
-DTSTART;VALUE=DATE:20160620
-DESCRIPTION:※この商品の発売日は6月下旬となっています
- 。\n発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%b4%cc%a5%d0%a5%c
- 3%a5%b8%a1%d6KING%20OF%20PRISM%20by%20PrettyRhythm%a1%d7%a1%caA3%a1%a76%b7
- %ee%c8%c7%a1%cb
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%b4%cc%a5%
+ d0%a5%c3%a5%b8%a1%d6KING%20OF%20PRISM%20by%20PrettyRhythm%a1%d7%a1%caA3%a1
+ %a76%b7%ee%c8%c7%a1%cb
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] 缶バッジ「KING OF PRISM by PrettyRhythm」（A3
  ：2月版）
 DTSTART;VALUE=DATE:20160201
-DESCRIPTION:発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%b4%cc%a5%
- d0%a5%c3%a5%c1%a1%d6KING%20OF%20PRISM%20by%20PrettyRhythm%a1%d7%a1%caA3%a1
- %a72%b7%ee%c8%c7%a1%cb
+DESCRIPTION:※この商品の発売日は2月となっています。\n
+ 発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%b4%cc%a5%d0%a5%c3%a5%
+ c1%a1%d6KING%20OF%20PRISM%20by%20PrettyRhythm%a1%d7%a1%caA3%a1%a72%b7%ee%c
+ 8%c7%a1%cb
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] ちびバッジ「KING OF PRISM by PrettyRhythm」
@@ -745,7 +725,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM とじコレ ラバークリップバッ
  ジvol.1
-DTSTART;VALUE=DATE:20160406
+DTSTART;VALUE=DATE:20160625
 DESCRIPTION:発売元: ツインクル\nWiki: http://kinprigoods.memo.wiki
  /d/KING%20OF%20PRISM%20%a4%c8%a4%b8%a5%b3%a5%ec%20%a5%e9%a5%d0%a1%bc%a5%af
  %a5%ea%a5%c3%a5%d7%a5%d0%a5%c3%a5%b8vol%2e1
@@ -776,10 +756,9 @@ BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm　スクエア缶バッ
  チ
 DTSTART;VALUE=DATE:20160610
-DESCRIPTION:※この商品の発売日は6月中旬となっています
- 。\n発売元: ベルハウス\nWiki: http://kinprigoods.memo.wiki/d/KING
- %20OF%20PRISM%20by%20PrettyRhythm%20%a5%b9%a5%af%a5%a8%a5%a2%b4%cc%a5%d0%a
- 5%c3%a5%c1
+DESCRIPTION:発売元: ベルハウス\nWiki: http://kinprigoods.memo.wiki
+ /d/KING%20OF%20PRISM%20by%20PrettyRhythm%20%a5%b9%a5%af%a5%a8%a5%a2%b4%cc%
+ a5%d0%a5%c3%a5%c1
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] プレートバッジ
@@ -821,7 +800,7 @@ DESCRIPTION:発売元: None\nWiki: http://kinprigoods.memo.wiki/d/%a5%c8%a
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] きゃらでふぉ KING OF PRISM 缶バッジ
-DTSTART;VALUE=DATE:20160501
+DTSTART;VALUE=DATE:20160531
 DESCRIPTION:発売元: タカラトミーアーツ\nWiki: http://kinprigoo
  ds.memo.wiki/d/%a4%ad%a4%e3%a4%e9%a4%c7%a4%d5%a4%a9%20KING%20OF%20PRISM%20
  %b4%cc%a5%d0%a5%c3%a5%b8
@@ -854,9 +833,9 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] キラキラフレームBIG缶バッジ
 DTSTART;VALUE=DATE:20160601
-DESCRIPTION:発売元: アクアマリン\nWiki: http://kinprigoods.memo.w
- iki/d/%a5%ad%a5%e9%a5%ad%a5%e9%a5%d5%a5%ec%a1%bc%a5%e0BIG%b4%cc%a5%d0%a5%c
- 3%a5%b8
+DESCRIPTION:※この商品の発売日は6月となっています。\n
+ 発売元: アクアマリン\nWiki: http://kinprigoods.memo.wiki/d/%a5%ad
+ %a5%e9%a5%ad%a5%e9%a5%d5%a5%ec%a1%bc%a5%e0BIG%b4%cc%a5%d0%a5%c3%a5%b8
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM アクリルバッジ キャラプレver
@@ -875,8 +854,7 @@ DESCRIPTION:発売元: コンテンツシード\nWiki: http://kinprigoods.
  %e3%a5%e9%a5%d7%a5%ecver
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[発売日] KING OF PRISM by PrettyRhythm　Over The Rainbowビッ
- グクッション
+SUMMARY:[発売日] Over The Rainbowビッグクッション
 DTSTART;VALUE=DATE:20160525
 DESCRIPTION:発売元: 学研プラス\nWiki: http://kinprigoods.memo.wiki
  /d/KING%20OF%20PRISM%20by%20PrettyRhythm%a1%a1Over%20The%20Rainbow%a5%d3%a
@@ -913,9 +891,8 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm 粗品タオル
 DTSTART;VALUE=DATE:20160610
-DESCRIPTION:※この商品の発売日は6月中旬となっています
- 。\n発売元: エンスカイ\nWiki: http://kinprigoods.memo.wiki/d/KING
- %20OF%20PRISM%20by%20PrettyRhythm%20%c1%c6%c9%ca%a5%bf%a5%aa%a5%eb
+DESCRIPTION:発売元: エンスカイ\nWiki: http://kinprigoods.memo.wiki
+ /d/KING%20OF%20PRISM%20by%20PrettyRhythm%20%c1%c6%c9%ca%a5%bf%a5%aa%a5%eb
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm ア〜ンTシャツ
@@ -949,15 +926,16 @@ BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm　PRISM KING CUP Tシャ
  ツ
 DTSTART;VALUE=DATE:20160601
-DESCRIPTION:発売元: エクスレア\nWiki: http://kinprigoods.memo.wiki
- /d/ING%20OF%20PRISM%20by%20PrettyRhythm%a1%a1PRISM%20KING%20CUP%20T%a5%b7%
- a5%e3%a5%c4
+DESCRIPTION:※この商品の発売日は6月となっています。\n
+ 発売元: エクスレア\nWiki: http://kinprigoods.memo.wiki/d/ING%20OF%
+ 20PRISM%20by%20PrettyRhythm%a1%a1PRISM%20KING%20CUP%20T%a5%b7%a5%e3%a5%c4
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] 抱き枕カバー　速水ヒロ
 DTSTART;VALUE=DATE:20160701
-DESCRIPTION:発売元: ホビージャパン\nWiki: http://kinprigoods.mem
- o.wiki/d/%ca%fa%a4%ad%cb%ed%a5%ab%a5%d0%a1%bc
+DESCRIPTION:※この商品の発売日は7月となっています。\n
+ 発売元: ホビージャパン\nWiki: http://kinprigoods.memo.wiki/d/%ca
+ %fa%a4%ad%cb%ed%a5%ab%a5%d0%a1%bc
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] でかトートバッグ Over the Rainbow/エーデル
@@ -989,10 +967,10 @@ DESCRIPTION:発売元: ベルハウス\nWiki: http://kinprigoods.memo.wiki
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm 巾着（第2弾）
-DTSTART;VALUE=DATE:20160720
-DESCRIPTION:※この商品の発売日は7月下旬となっています
- 。\n発売元: ベルハウス\nWiki: http://kinprigoods.memo.wiki/d/KING
- %20OF%20PRISM%20by%20PrettyRhythm%20%b6%d2%c3%e5%a1%ca%c2%e82%c3%c6%a1%cb
+DTSTART;VALUE=DATE:20160731
+DESCRIPTION:発売元: ベルハウス\nWiki: http://kinprigoods.memo.wiki
+ /d/KING%20OF%20PRISM%20by%20PrettyRhythm%20%b6%d2%c3%e5%a1%ca%c2%e82%c3%c6
+ %a1%cb
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] マルチトレー「KING OF PRISM by PrettyRhythm」
@@ -1052,14 +1030,6 @@ DESCRIPTION:発売元: エイベックス・ピクチャーズ\nWiki: http
  bf%a1%bc%a5%dd%a1%bc%a5%c1
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[発売日] KING OF PRISM by PrettyRhythm レターポーチ（第
- 2弾）
-DTSTART;VALUE=DATE:20160630
-DESCRIPTION:発売元: エイベックス・ピクチャーズ\nWiki: http
- ://kinprigoods.memo.wiki/d/KING%20OF%20PRISM%20by%20PrettyRhythm%20%a5%ec%
- a5%bf%a1%bc%a5%dd%a1%bc%a5%c1%a1%ca%c2%e82%c3%c6%a1%cb
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm フラットポーチ
 DTSTART;VALUE=DATE:20160630
 DESCRIPTION:発売元: ブシロードミュージック\nWiki: http://kin
@@ -1102,14 +1072,6 @@ DESCRIPTION:発売元: アニメイト\nWiki: http://kinprigoods.memo.wiki
  4%a5%c8%a5%ab%a5%d5%a5%a7%a1%cb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[発売日] KING OF PRISM by PrettyRhythm クリアファイル（
- ブレイク）
-DTSTART;VALUE=DATE:20160616
-DESCRIPTION:発売元: ブレイク\nWiki: http://kinprigoods.memo.wiki/d/
- KING%20OF%20PRISM%20by%20PrettyRhythm%20%a5%af%a5%ea%a5%a2%a5%d5%a5%a1%a5%
- a4%a5%eb%a1%ca%a5%d6%a5%ec%a5%a4%a5%af%a1%cb
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[発売日] クリアファイル2枚セット A/B
 DTSTART;VALUE=DATE:20160429
 DESCRIPTION:発売元: None\nWiki: http://kinprigoods.memo.wiki/d/%a5%af%a
@@ -1119,10 +1081,9 @@ BEGIN:VEVENT
 SUMMARY:[発売日] アルミブックマーカー「KING OF PRISM by Pret
  tyRhythm」
 DTSTART;VALUE=DATE:20160510
-DESCRIPTION:※この商品の発売日は5月中旬となっています
- 。\n発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a5%a2%a5%eb%a5%d
- f%a5%d6%a5%c3%a5%af%a5%de%a1%bc%a5%ab%a1%bc%a1%d6KING%20OF%20PRISM%20from%
- 20PrettyRhythm%a1%d7
+DESCRIPTION:発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a5%a2%a5%
+ eb%a5%df%a5%d6%a5%c3%a5%af%a5%de%a1%bc%a5%ab%a1%bc%a1%d6KING%20OF%20PRISM%
+ 20from%20PrettyRhythm%a1%d7
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] ハニマグ (全5種)
@@ -1174,9 +1135,8 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] 手帳型スマホケース
 DTSTART;VALUE=DATE:20160401
-DESCRIPTION:※この商品の発売日は4月上旬となっています
- 。\n発売元: コンテンツシード\nWiki: http://kinprigoods.memo.wi
- ki/d/%bc%ea%c4%a2%b7%bf%a5%b9%a5%de%a5%db%a5%b1%a1%bc%a5%b9
+DESCRIPTION:発売元: コンテンツシード\nWiki: http://kinprigoods.
+ memo.wiki/d/%bc%ea%c4%a2%b7%bf%a5%b9%a5%de%a5%db%a5%b1%a1%bc%a5%b9
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM ぽち袋
@@ -1210,9 +1170,9 @@ SUMMARY:[発売日] キャラケーブルフラット「KING OF PRISM by P
  rettyRhythm」
 DTSTART;VALUE=DATE:20160520
 DESCRIPTION:※この商品の発売日は5月下旬となっています
- 。\n発売元: None\nWiki: http://kinprigoods.memo.wiki/d/%a5%ad%a5%e3%a5
- %e9%a5%b1%a1%bc%a5%d6%a5%eb%a5%d5%a5%e9%a5%c3%a5%c8%a1%d6KING%20OF%20PRISM
- %20by%20PrettyRhythm%a1%d7
+ 。\n発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a5%ad%a5%e3%a5%e
+ 9%a5%b1%a1%bc%a5%d6%a5%eb%a5%d5%a5%e9%a5%c3%a5%c8%a1%d6KING%20OF%20PRISM%2
+ 0by%20PrettyRhythm%a1%d7
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] キャラチャージライト「KING OF PRISM by Pret
@@ -1227,12 +1187,12 @@ BEGIN:VEVENT
 SUMMARY:[発売日] キャラリール「KING OF PRISM by PrettyRhythm」
 DTSTART;VALUE=DATE:20160520
 DESCRIPTION:※この商品の発売日は5月下旬となっています
- 。\n発売元: None\nWiki: http://kinprigoods.memo.wiki/d/%a5%ad%a5%e3%a5
- %e9%a5%ea%a1%bc%a5%eb%a1%d6KING%20OF%20PRISM%20by%20PrettyRhythm%a1%d7
+ 。\n発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a5%ad%a5%e3%a5%e
+ 9%a5%ea%a1%bc%a5%eb%a1%d6KING%20OF%20PRISM%20by%20PrettyRhythm%a1%d7
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] トレーディングミニ応援うちわ
-DTSTART;VALUE=DATE:20160527
+DTSTART;VALUE=DATE:20160610
 DESCRIPTION:発売元: エイベックス・ピクチャーズ\nWiki: http
  ://kinprigoods.memo.wiki/d/%a5%c8%a5%ec%a1%bc%a5%c7%a5%a3%a5%f3%a5%b0%a5%d
  f%a5%cb%b1%fe%b1%e7%a4%a6%a4%c1%a4%ef
@@ -1286,15 +1246,23 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] ミニフラッグ
 DTSTART;VALUE=DATE:20160310
-DESCRIPTION:※この商品の発売日は3月中旬となっています
- 。\n発売元: コンテンツシード\nWiki: http://kinprigoods.memo.wi
- ki/d/%a5%df%a5%cb%a5%d5%a5%e9%a5%c3%a5%b0
+DESCRIPTION:発売元: コンテンツシード\nWiki: http://kinprigoods.
+ memo.wiki/d/%a5%df%a5%cb%a5%d5%a5%e9%a5%c3%a5%b0
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] 応援ルミカライト
 DTSTART;VALUE=DATE:20160429
 DESCRIPTION:発売元: None\nWiki: http://kinprigoods.memo.wiki/d/%b1%fe%b
  1%e7%a5%eb%a5%df%a5%ab%a5%e9%a5%a4%a5%c8
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm プリズムブレード
+ ＆付け替えチューブ
+DTSTART;VALUE=DATE:20160701
+DESCRIPTION:※この商品の発売日は7月となっています。\n
+ 発売元: ブシロードミュージック\nWiki: http://kinprigoods.mem
+ o.wiki/d/KING%20OF%20PRISM%20by%20PrettyRhythm%20%a5%d7%a5%ea%a5%ba%a5%e0%
+ a5%d6%a5%ec%a1%bc%a5%c9
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] キャラレココースター (A3版：3月発売)
@@ -1334,10 +1302,9 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm ポップコーン
 DTSTART;VALUE=DATE:20160610
-DESCRIPTION:※この商品の発売日は6月中旬となっています
- 。\n発売元: マックスリミテッド\nWiki: http://kinprigoods.memo
- .wiki/d/KING%20OF%20PRISM%20by%20PrettyRhythm%20%a5%dd%a5%c3%a5%d7%a5%b3%a
- 1%bc%a5%f3
+DESCRIPTION:発売元: マックスリミテッド\nWiki: http://kinprigoo
+ ds.memo.wiki/d/KING%20OF%20PRISM%20by%20PrettyRhythm%20%a5%dd%a5%c3%a5%d7%
+ a5%b3%a1%bc%a5%f3
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythmリボンブローチ
@@ -1352,6 +1319,13 @@ DTSTART;VALUE=DATE:20160630
 DESCRIPTION:発売元: セブンツー\nWiki: http://kinprigoods.memo.wiki
  /d/KING%20OF%20PRISM%a1%a1%a4%d7%a4%af%a4%d7%a4%af%a5%d6%a5%ed%a1%bc%a5%c1
  %20%a5%d7%a5%e9%a5%b9
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm フェルトブローチ
+DTSTART;VALUE=DATE:20160702
+DESCRIPTION:発売元: ブレイク\nWiki: http://kinprigoods.memo.wiki/d/
+ KING%20OF%20PRISM%20by%20PrettyRhythm%20%a5%d5%a5%a7%a5%eb%a5%c8%a5%d6%a5%
+ ed%a1%bc%a5%c1
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm　如月ルヰのイヤ
@@ -1373,7 +1347,7 @@ BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm レースブレスレッ
  ト
 DTSTART;VALUE=DATE:20160610
-DESCRIPTION:※この商品の発売日は6月中旬となっています
+DESCRIPTION:※この商品の発売日は7月下旬となっています
  。\n発売元: エンスカイ\nWiki: http://kinprigoods.memo.wiki/d/KING
  %20OF%20PRISM%20by%20PrettyRhythm%20%a5%ec%a1%bc%a5%b9%a5%d6%a5%ec%a5%b9%a
  5%ec%a5%c3%a5%c8
@@ -1403,9 +1377,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] トレーディングミニ色紙 第2弾
 DTSTART;VALUE=DATE:20160801
-DESCRIPTION:発売元: タカラトミーアーツ\nWiki: http://kinprigoo
- ds.memo.wiki/d/%a5%c8%a5%ec%a1%bc%a5%c7%a5%a3%a5%f3%a5%b0%a5%df%a5%cb%bf%a
- 7%bb%e6%20%c2%e82%c3%c6
+DESCRIPTION:※この商品の発売日は8月となっています。\n
+ 発売元: タカラトミーアーツ\nWiki: http://kinprigoods.memo.wiki
+ /d/%a5%c8%a5%ec%a1%bc%a5%c7%a5%a3%a5%f3%a5%b0%a5%df%a5%cb%bf%a7%bb%e6%20%c
+ 2%e82%c3%c6
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] 缶ミラー
@@ -1416,9 +1391,8 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] みんなのくじ
 DTSTART;VALUE=DATE:20160901
-DESCRIPTION:※この商品の発売日は9月上旬となっています
- 。\n発売元: FuRyu\nWiki: http://kinprigoods.memo.wiki/d/%a4%df%a4%f3%a
- 4%ca%a4%ce%a4%af%a4%b8
+DESCRIPTION:発売元: FuRyu\nWiki: http://kinprigoods.memo.wiki/d/%a4%df%
+ a4%f3%a4%ca%a4%ce%a4%af%a4%b8
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] ヒロ様に捧げる黄色いバラ
@@ -1434,7 +1408,7 @@ DESCRIPTION:発売元: None\nWiki: http://kinprigoods.memo.wiki/d/%a5%b7%a
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[発売日] KING OF PRISM by PrettyRhythm　ぱしゃこれ
-DTSTART;VALUE=DATE:20160601
+DTSTART;VALUE=DATE:20160616
 DESCRIPTION:発売元: ムービック\nWiki: http://kinprigoods.memo.wiki
  /d/KING%20OF%20PRISM%20by%20PrettyRhythm%a1%a1%a4%d1%a4%b7%a4%e3%a4%b3%a4%
  ec
@@ -1534,5 +1508,312 @@ SUMMARY:[発売日] コミックジーン 2016年7月号
 DTSTART;VALUE=DATE:20160615
 DESCRIPTION:発売元: KADOKAWA\nWiki: http://kinprigoods.memo.wiki/d/%a5%
  b3%a5%df%a5%c3%a5%af%a5%b8%a1%bc%a5%f3%202016%c7%af7%b7%ee%b9%e6
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] アクリルキーホルダー（プリズムストー
+ ン版）
+DTSTART;VALUE=DATE:20160525
+DESCRIPTION:発売元: プリズムストーン\nWiki: http://kinprigoods.
+ memo.wiki/d/%a5%a2%a5%af%a5%ea%a5%eb%a5%ad%a1%bc%a5%db%a5%eb%a5%c0%a1%bc%a
+ 1%ca%a5%d7%a5%ea%a5%ba%a5%e0%a5%b9%a5%c8%a1%bc%a5%f3%a1%cb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm アクリルキーチェ
+ ーン（アニメプラザ）
+DTSTART;VALUE=DATE:20160603
+DESCRIPTION:発売元: アニメプラザ\nWiki: http://kinprigoods.memo.w
+ iki/d/KING%20OF%20PRISM%20by%20PrettyRhythm%20%a5%a2%a5%af%a5%ea%a5%eb%a5%
+ ad%a1%bc%a5%c1%a5%a7%a1%bc%a5%f3%a1%ca%a5%a2%a5%cb%a5%e1%a5%d7%a5%e9%a5%b6
+ %a1%cb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm 缶バッジ（アニメ
+ プラザ）
+DTSTART;VALUE=DATE:20160603
+DESCRIPTION:発売元: アニメプラザ\nWiki: http://kinprigoods.memo.w
+ iki/d/KING%20OF%20PRISM%20by%20PrettyRhythm%20%b4%cc%a5%d0%a5%c3%a5%b8%a1%
+ ca%a5%a2%a5%cb%a5%e1%a5%d7%a5%e9%a5%b6%a1%cb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] キャラホルダー KING OF PRISM by PrettyRhythm
+DTSTART;VALUE=DATE:20160701
+DESCRIPTION:発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a5%ad%a5%
+ e3%a5%e9%a5%db%a5%eb%a5%c0%a1%bc%20KING%20OF%20PRISM%20by%20PrettyRhythm
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm 描き下ろしSD サイ
+ ン入りウォールステッカー
+DTSTART;VALUE=DATE:20160627
+DESCRIPTION:発売元: アニメプラザ\nWiki: http://kinprigoods.memo.w
+ iki/d/KING%20OF%20PRISM%20by%20PrettyRhythm%20%c9%c1%a4%ad%b2%bc%a4%ed%a4%
+ b7SD%20%a5%b5%a5%a4%a5%f3%c6%fe%a4%ea%a5%a6%a5%a9%a1%bc%a5%eb%a5%b9%a5%c6%
+ a5%c3%a5%ab%a1%bc
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] えんぴつけずり KING OF PRISM by PrettyRhythm
+DTSTART;VALUE=DATE:20160701
+DESCRIPTION:発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a4%a8%a4%
+ f3%a4%d4%a4%c4%a4%b1%a4%ba%a4%ea%20KING%20OF%20PRISM%20by%20PrettyRhythm
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] キャラジャック KING OF PRISM by PrettyRhythm
+DTSTART;VALUE=DATE:20160701
+DESCRIPTION:発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a5%ad%a5%
+ e3%a5%e9%a5%b8%a5%e3%a5%c3%a5%af%20KING%20OF%20PRISM%20by%20PrettyRhythm
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm ホログラムプリズ
+ ムポスター（アニメプラザ）
+DTSTART;VALUE=DATE:20160603
+DESCRIPTION:発売元: アニメプラザ\nWiki: http://kinprigoods.memo.w
+ iki/d/KING%20OF%20PRISM%20by%20PrettyRhythm%20%a5%db%a5%ed%a5%b0%a5%e9%a5%
+ e0%a5%d7%a5%ea%a5%ba%a5%e0%a5%dd%a5%b9%a5%bf%a1%bc%a1%ca%a5%a2%a5%cb%a5%e1
+ %a5%d7%a5%e9%a5%b6%a1%cb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm みかえり和服 誕
+ 生花ラバーストラップ
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: HMM\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%20%a4%df%a4%ab%a4%a8%a4%ea%cf%c2%c9%fe%20%c3%
+ c2%c0%b8%b2%d6%a5%e9%a5%d0%a1%bc%a5%b9%a5%c8%a5%e9%a5%c3%a5%d7
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm みかえり和服 金
+ 魚鉢アクリルキーホルダー
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: HMM\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%20%a4%df%a4%ab%a4%a8%a4%ea%cf%c2%c9%fe%20%b6%
+ e2%b5%fb%c8%ad%a5%a2%a5%af%a5%ea%a5%eb%a5%ad%a1%bc%a5%db%a5%eb%a5%c0%a1%bc
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm みかえり和服 和
+ 紙缶バッジ
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: HMM\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%20%a4%df%a4%ab%a4%a8%a4%ea%cf%c2%c9%fe%20%cf%
+ c2%bb%e6%b4%cc%a5%d0%a5%c3%a5%b8
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm みかえり和服 ミ
+ ニタオル
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: HMM\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%20%a4%df%a4%ab%a4%a8%a4%ea%cf%c2%c9%fe%20%a5%
+ df%a5%cb%a5%bf%a5%aa%a5%eb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm みかえり和服 ク
+ リアファイル
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: HMM\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%20%a4%df%a4%ab%a4%a8%a4%ea%cf%c2%c9%fe%20%a5%
+ af%a5%ea%a5%a2%a5%d5%a5%a1%a5%a4%a5%eb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm みかえり和服 花
+ 火スクエアマグネット
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: HMM\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%20%a4%df%a4%ab%a4%a8%a4%ea%cf%c2%c9%fe%20%b2%
+ d6%b2%d0%a5%b9%a5%af%a5%a8%a5%a2%a5%de%a5%b0%a5%cd%a5%c3%a5%c8
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm みかえり和服 レ
+ インボーブロックメモ
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: HMM\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%20%a4%df%a4%ab%a4%a8%a4%ea%cf%c2%c9%fe%20%a5%
+ ec%a5%a4%a5%f3%a5%dc%a1%bc%a5%d6%a5%ed%a5%c3%a5%af%a5%e1%a5%e2
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm みかえり和服 湯
+ のみ＋コースターセット
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: HMM\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%20%a4%df%a4%ab%a4%a8%a4%ea%cf%c2%c9%fe%20%c5%
+ f2%a4%ce%a4%df%a1%dc%a5%b3%a1%bc%a5%b9%a5%bf%a1%bc%a5%bb%a5%c3%a5%c8
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm 1000ピース
+DTSTART;VALUE=DATE:20160701
+DESCRIPTION:※この商品の発売日は7月となっています。\n
+ 発売元: エンスカイ\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%201000%a5%d4%a1%bc%a5%b9
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm HMM×キンプリ アク
+ リルキーホルダー
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: HMM\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%20HMM%a1%df%a5%ad%a5%f3%a5%d7%a5%ea%20%a5%a2%
+ a5%af%a5%ea%a5%eb%a5%ad%a1%bc%a5%db%a5%eb%a5%c0%a1%bc
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm HMM×キンプリ 缶バ
+ ッジキーホルダー
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: HMM\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%20HMM%a1%df%a5%ad%a5%f3%a5%d7%a5%ea%20%b4%cc%
+ a5%d0%a5%c3%a5%b8%a5%ad%a1%bc%a5%db%a5%eb%a5%c0%a1%bc
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] ストラップ
+DTSTART;VALUE=DATE:20160116
+DESCRIPTION:発売元: ムービック\nWiki: http://kinprigoods.memo.wiki
+ /d/%a5%b9%a5%c8%a5%e9%a5%c3%a5%d7
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM デカキーホルダー キャラプレ
+ ver
+DTSTART;VALUE=DATE:20160430
+DESCRIPTION:発売元: コンテンツシード\nWiki: http://kinprigoods.
+ memo.wiki/d/KING%20OF%20PRISM%20%a5%c7%a5%ab%a5%ad%a1%bc%a5%db%a5%eb%a5%c0
+ %a1%bc%20%a5%ad%a5%e3%a5%e9%a5%d7%a5%ecver
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm　高発光名場面缶
+ バッジ12種（トレーディング）
+DTSTART;VALUE=DATE:20160625
+DESCRIPTION:発売元: グルーヴガレージ\nWiki: http://kinprigoods.
+ memo.wiki/d/%b9%e2%c8%af%b8%f7%cc%be%be%ec%cc%cc%b4%cc%a5%d0%a5%c3%a5%b812
+ %bc%ef%a1%ca%a5%c8%a5%ec%a1%bc%a5%c7%a5%a3%a5%f3%a5%b0%a1%cb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] ミニトートバッグ
+DTSTART;VALUE=DATE:20160123
+DESCRIPTION:発売元: ムービック\nWiki: http://kinprigoods.memo.wiki
+ /d/%a5%df%a5%cb%a5%c8%a1%bc%a5%c8%a5%d0%a5%c3%a5%b0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm ランチバッグ
+DTSTART;VALUE=DATE:20160601
+DESCRIPTION:※この商品の発売日は6月となっています。\n
+ 発売元: アクアマリン\nWiki: http://kinprigoods.memo.wiki/d/KING%2
+ 0OF%20PRISM%20by%20PrettyRhythm%20%a5%e9%a5%f3%a5%c1%a5%d0%a5%c3%a5%b0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm レターポーチ（第
+ 2弾）
+DTSTART;VALUE=DATE:20160630
+DESCRIPTION:発売元: エイベックス・ピクチャーズ\nWiki: http
+ ://kinprigoods.memo.wiki/d/KING%20OF%20PRISM%20by%20PrettyRhythm%20%a5%ec%
+ a5%bf%a1%bc%a5%dd%a1%bc%a5%c1%a1%ca%c2%e82%c3%c6%a1%cb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm ラフォーレ原宿×
+ キンプリ クリアファイル
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: HMM\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%20%a5%e9%a5%d5%a5%a9%a1%bc%a5%ec%b8%b6%bd%c9%
+ a1%df%a5%ad%a5%f3%a5%d7%a5%ea%20%a5%af%a5%ea%a5%a2%a5%d5%a5%a1%a5%a4%a5%eb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM とじコレ 6連メモ
+DTSTART;VALUE=DATE:20160731
+DESCRIPTION:発売元: ツインクル\nWiki: http://kinprigoods.memo.wiki
+ /d/KING%20OF%20PRISM%20%a4%c8%a4%b8%a5%b3%a5%ec%206%cf%a2%a5%e1%a5%e2
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm HMM×キンプリ 竹う
+ ちわ
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: HMM\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%20HMM%a1%df%a5%ad%a5%f3%a5%d7%a5%ea%20%c3%dd%
+ a4%a6%a4%c1%a4%ef
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] マグカップ
+DTSTART;VALUE=DATE:20160109
+DESCRIPTION:発売元: ムービック\nWiki: http://kinprigoods.memo.wiki
+ /d/%a5%de%a5%b0%a5%ab%a5%c3%a5%d7
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm みかえり和服 桐
+ 箱入りお箸セット
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: HMM\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%20%a4%df%a4%ab%a4%a8%a4%ea%cf%c2%c9%fe%20%b6%
+ cd%c8%a2%c6%fe%a4%ea%a4%aa%c8%a4%a5%bb%a5%c3%a5%c8
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM キャンディ缶
+DTSTART;VALUE=DATE:20160525
+DESCRIPTION:発売元: コンテンツシード\nWiki: http://kinprigoods.
+ memo.wiki/d/KING%20OF%20PRISM%20%a5%ad%a5%e3%a5%f3%a5%c7%a5%a3%b4%cc
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm ラフォーレ原宿×
+ キンプリ クリスタルアート
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: HMM\nWiki: http://kinprigoods.memo.wiki/d/KING%20OF
+ %20PRISM%20by%20PrettyRhythm%20%a5%e9%a5%d5%a5%a9%a1%bc%a5%ec%b8%b6%bd%c9%
+ a1%df%a5%ad%a5%f3%a5%d7%a5%ea%20%a5%af%a5%ea%a5%b9%a5%bf%a5%eb%a5%a2%a1%bc
+ %a5%c8
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM マイクロファイバーハンカチ
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: アクアマリン\nWiki: http://kinprigoods.memo.w
+ iki/d/KING%20OF%20PRISM%20%a5%de%a5%a4%a5%af%a5%ed%a5%d5%a5%a1%a5%a4%a5%d0
+ %a1%bc%a5%cf%a5%f3%a5%ab%a5%c1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] ハート型ペンライト
+DTSTART;VALUE=DATE:20160617
+DESCRIPTION:発売元: アニメイト\nWiki: http://kinprigoods.memo.wiki
+ /d/%a5%cf%a1%bc%a5%c8%b7%bf%a5%da%a5%f3%a5%e9%a5%a4%a5%c8
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] アクリルキーホルダー KING OF PRISM by Pretty
+ Rhythm（A3:7月版）
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%a5%a2%a5%
+ af%a5%ea%a5%eb%a5%ad%a1%bc%a5%db%a5%eb%a5%c0%a1%bc%20KING%20OF%20PRISM%20b
+ y%20PrettyRhythm%a1%caA3%3a7%b7%ee%c8%c7%a1%cb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] 缶バッジ KING OF PRISM by PrettyRhythm（A3：7月
+ 版・トレーディング）
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: A3\nWiki: http://kinprigoods.memo.wiki/d/%b4%cc%a5%
+ d0%a5%c3%a5%b8%20KING%20OF%20PRISM%20by%20PrettyRhythm%a1%caA3%a1%a77%b7%e
+ e%c8%c7%a1%a6%a5%c8%a5%ec%a1%bc%a5%c7%a5%a3%a5%f3%a5%b0%a1%cb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM　ポケットタオル
+DTSTART;VALUE=DATE:20160720
+DESCRIPTION:※この商品の発売日は7月下旬となっています
+ 。\n発売元: アトリエ・マギ\nWiki: http://kinprigoods.memo.wiki/
+ d/KING%20OF%20PRISM%a1%a1%a5%dd%a5%b1%a5%c3%a5%c8%a5%bf%a5%aa%a5%eb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM　ハンドタオル
+DTSTART;VALUE=DATE:20160801
+DESCRIPTION:※この商品の発売日は7月下旬となっています
+ 。\n発売元: アトリエ・マギ\nWiki: http://kinprigoods.memo.wiki/
+ d/KING%20OF%20PRISM%a1%a1%a5%cf%a5%f3%a5%c9%a5%bf%a5%aa%a5%eb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm ロングマフラータ
+ オル
+DTSTART;VALUE=DATE:20160528
+DESCRIPTION:発売元: アクアマリン\nWiki: http://kinprigoods.memo.w
+ iki/d/KING%20OF%20PRISM%20by%20PrettyRhythm%20%a5%ed%a5%f3%a5%b0%a5%de%a5%
+ d5%a5%e9%a1%bc%a5%bf%a5%aa%a5%eb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] KING OF PRISM by PrettyRhythm クリアファイル（
+ ブレイク）
+DTSTART;VALUE=DATE:20160616
+DESCRIPTION:発売元: ブレイク\nWiki: http://kinprigoods.memo.wiki/d/
+ KING%20OF%20PRISM%20by%20PrettyRhythm%20%a5%af%a5%ea%a5%a2%a5%d5%a5%a1%a5%
+ a4%a5%eb%a1%ca%a5%d6%a5%ec%a5%a4%a5%af%a1%cb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[発売日] spoon.2Di vol.14
+DTSTART;VALUE=DATE:20160531
+DESCRIPTION:発売元: PREVISION(プレビジョン)\nWiki: http://kinprig
+ oods.memo.wiki/d/spoon%2e2Di%20vol%2e14
 END:VEVENT
 END:VCALENDAR

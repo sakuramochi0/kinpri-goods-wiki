@@ -14,16 +14,23 @@ for i in c.find():
 
         # date_extra
         if i['date_extra']:
-            if i['date_extra'] == '上':
+            if i['date_extra'] == '月':
                 day = 1
-            elif i['date_extra'] == '中':
-                day = 10
-            elif i['date_extra'] == '下':
-                day = 20
-            date_extra_description = '※この商品の発売日は{month}月{extra}旬となっています。\n'.format(
-                month=date.month,
-                extra=i['date_extra'],
-            )
+                date_extra_description = '※この商品の発売日は{month}月となっています。\n'.format(
+                    month=date.month,
+                    extra=i['date_extra'],
+                )
+            else:
+                if i['date_extra'] == '上':
+                    day = 1
+                elif i['date_extra'] == '中':
+                    day = 10
+                elif i['date_extra'] == '下':
+                    day = 20
+                    date_extra_description = '※この商品の発売日は{month}月{extra}旬となっています。\n'.format(
+                        month=date.month,
+                        extra=i['date_extra'],
+                    )
         else:
             day = date.day
             date_extra_description = ''
