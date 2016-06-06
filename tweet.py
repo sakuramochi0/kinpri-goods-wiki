@@ -70,18 +70,18 @@ def make_num_status(date=None):
         date = get_date()
 
     # tweet a number of items
-    num = db.find({'date': date, 'date_extra': None}).count()
-    print([i['name'] for i in db.find({'date': date, 'date_extra': None})])
+    num = c.items.find({'date': date, 'date_extra': None}).count()
+    print([i['name'] for i in c.items.find({'date': date, 'date_extra': None})])
     if num:
         status = 'みんな〜、{date_description}{date}は{num}個のグッズが発売されるみたいだぞー。これから紹介するなー。'.format(
             date_description=get_date_description(date), date=format_date(date), num=num
         )
     else:
-        future_items = db.find({'date': {'$gt': date}, 'date_extra': None}).sort('date')
+        future_items = c.items.find({'date': {'$gt': date}, 'date_extra': None}).sort('date')
         if future_items.count():
             next_item = future_items[0]
             next_date = next_item['date']
-            next_num = db.find({'date': next_date, 'date_extra': None}).count()
+            next_num = c.items.find({'date': next_date, 'date_extra': None}).count()
             status = '{date_description}{date}は、特にグッズは発売されないみたいだなー。次は{next_date_description}{next_date}に、{next_num}個のグッズが発売されるようだ。'.format(
                 date_description=get_date_description(date),
                 date=format_date(date),
@@ -172,6 +172,68 @@ def print_date_items(date):
     for item in items:
         print_item(item)
 
+# retweet functions
+def retweet_user(screen_name):
+    # create search query
+    query = 'from:{screen_name} (キンプリ OR "KING OF PRISM" OR キングオブプリズム OR #kinpri)'.format(
+        screen_name=screen_name)
+
+    # fetch user's tweets
+    tweets = api.search(q=query, count=100)
+
+    for t in reversed(tweets):
+
+        # if new tweet, insert to database
+        if not c.tweets.find_one(t.id):
+            doc = make_doc(t)
+            c.tweets.insert(doc)
+        
+        # if not retweeted, do it and record to database
+        doc = c.tweets.find_one(t.id)
+        if not doc['meta']['retweeted'] and not is_retweeted(doc):
+            if args.debug:
+                print('would retweeted:')
+                print_tweet(doc)
+                if args.debug_retweet:
+                    api.retweet(doc['_id'])
+            else:
+                api.retweet(doc['_id'])
+                c.tweets.update({'_id': doc['_id']}, {'$set': {'meta.retweeted': True}})
+                time.sleep(1)
+
+def make_doc(tweet):
+    doc = dict()
+    doc['_id'] = tweet.id
+    doc['meta'] = {'time': tweet.created_at, 'retweeted': False}
+    doc['data'] = tweet._json
+    return doc
+
+def print_tweet(t):
+    if type(t) is dict:
+        tweet_url = 'https://twitter.com/{name}/statuses/{id}'.format(
+            name=t['data']['user']['screen_name'],
+            id=t['_id'],
+        )
+        print('*', t['meta']['time'], tweet_url)
+        print('* {}(@{})'.format(t['data']['user']['name'], t['data']['user']['screen_name']))
+        print(t['data']['text'])
+        print('-' * 8)
+    else:
+        tweet_url = 'https://twitter.com/{name}/statuses/{id}'.format(
+            name=t.user.screen_name,
+            id=t.id,
+        )
+        print('*', t.created_at, tweet_url)
+        print('* {}(@{})'.format(t.user.name, t.user.screen_name))
+        print(t.text)
+        print('-' * 8)
+
+def is_retweeted(tweet):
+    if type(tweet) is tweepy.Status:
+        return 'retweeted_status' in tweet._json
+    elif type(tweet) is dict:
+        return 'retweeted_status' in tweet['data']
+
 # stub
 def print_week_items(date):
     """
@@ -192,24 +254,30 @@ def get_dates_items(start_date, end_date):
     """
     指定した日付の期間に発売するアイテムのCursorを返す
     """
-    return db.find({'date': {'$gte': start_date, '$lte': end_date}, 'date_extra': None})
+    return c.items.find({'date': {'$gte': start_date, '$lte': end_date}, 'date_extra': None})
 
 if __name__ == '__main__':
     # parse args
     parser = argparse.ArgumentParser()
+
+    # for debug
     parser.add_argument('-d', '--debug', action='store_true')
+    parser.add_argument('--debug_retweet', action='store_true')
+    
     parser.add_argument('command', type=str, choices=[
         'tweet_today', 'print_today',
         'tweet_tomorrow', 'print_tomorrow',
         'tweet_date', 'print_date',
+        'retweet',
     ])
     parser.add_argument('--date')
     parser.add_argument('--delta', type=int, default=1)
+    parser.add_argument('--screen_name') # for retweet
+
     args = parser.parse_args()
      
     # prepare database
-    c = MongoClient()
-    db = c.kinpri_goods_wiki.items
+    c = MongoClient().kinpri_goods_wiki
      
     # get tweepy api
     if args.debug:
@@ -247,3 +315,5 @@ if __name__ == '__main__':
         elif args.command == 'print_date':
             print_date_items(date)
     
+    elif args.command == 'retweet':
+        retweet_user(args.screen_name)
