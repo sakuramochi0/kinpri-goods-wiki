@@ -9,6 +9,8 @@ from get_tweepy import *
 
 from save_items import print_item
 
+TWITTER_SEARCH_KEYWORDS = '(キンプリ OR "KING OF PRISM" OR キングオブプリズム OR #kinpri OR プリリズ OR プリティーリズム)'
+
 def tweet_date_items(date):
     """
     指定した日付に発売される全アイテムをツイートする
@@ -174,12 +176,19 @@ def print_date_items(date):
 
 # retweet functions
 def retweet_user(screen_name):
-    # create search query
-    query = 'from:{screen_name} (キンプリ OR "KING OF PRISM" OR キングオブプリズム OR #kinpri)'.format(
-        screen_name=screen_name)
-
-    # fetch user's tweets
-    tweets = api.search(q=query, count=100)
+    if screen_name == 'cafegirlinfo':
+        tweets = []
+        for t in api.user_timeline(screen_name=screen_name):
+            if in_kinpri_text(t):
+                tweets.append(t)
+    else:
+        # create search query
+        query = 'from:{screen_name} {keywords}'.format(
+            screen_name=screen_name,
+            keywords=TWITTER_SEARCH_KEYWORDS,
+        )
+        # fetch user's tweets
+        tweets = api.search(q=query, count=100)
 
     for t in reversed(tweets):
 
@@ -201,32 +210,69 @@ def retweet_user(screen_name):
                 c.tweets.update({'_id': doc['_id']}, {'$set': {'meta.retweeted': True}})
                 time.sleep(1)
 
-def make_doc(tweet):
+# utility functions
+
+def make_doc(tweet, retweeted=False):
     doc = dict()
     doc['_id'] = tweet.id
-    doc['meta'] = {'time': tweet.created_at, 'retweeted': False}
+    doc['meta'] = {'time': tweet.created_at, 'retweeted': retweeted}
     doc['data'] = tweet._json
     return doc
 
+def add_collection(tweet, retweeted=False):
+    doc = make_doc(tweet, retweeted)
+    return c.tweets.update({'_id': doc['_id']}, doc, upsert=True)
+    
 def print_tweet(t):
     if type(t) is dict:
-        tweet_url = 'https://twitter.com/{name}/statuses/{id}'.format(
+        tweet_url = 'https://twitter.com/{name}/status/{id}'.format(
             name=t['data']['user']['screen_name'],
             id=t['_id'],
         )
-        print('*', t['meta']['time'], tweet_url)
-        print('* {}(@{})'.format(t['data']['user']['name'], t['data']['user']['screen_name']))
+        if t['meta']['retweeted']:
+            retweeted = ' *'
+        else:
+            retweeted = ''
+        print(t['meta']['time'], '/ ♡ {} ↻ {}{retweeted} / {}'.format(
+            t['data']['favorite_count'],
+            t['data']['retweet_count'],
+            tweet_url,
+            retweeted=retweeted,
+        ))
+        print('{}(@{})'.format(t['data']['user']['name'], t['data']['user']['screen_name']))
         print(t['data']['text'])
         print('-' * 8)
     else:
-        tweet_url = 'https://twitter.com/{name}/statuses/{id}'.format(
+        tweet_url = 'https://twitter.com/{name}/status/{id}'.format(
             name=t.user.screen_name,
             id=t.id,
         )
-        print('*', t.created_at, tweet_url)
-        print('* {}(@{})'.format(t.user.name, t.user.screen_name))
+        print(t.created_at, '/ ♡ {} ↻ {} /'.format(t.favorite_count, t.retweet_count), tweet_url)
+        print('{}(@{})'.format(t.user.name, t.user.screen_name))
         print(t.text)
         print('-' * 8)
+
+def get_accounts():
+    return sorted(c.tweets.distinct('data.user.screen_name'))
+
+def get_all_tweets(screen_name):
+    ts = []
+    for t in tweepy.Cursor(api.user_timeline, screen_name=screen_name, count=200).items():
+        ts.append(t)
+    return ts
+
+def get_all_tweets_by_search(screen_name):
+    ts = []
+    query = 'from:{screen_name} {keywords}'.format(
+        screen_name=screen_name,
+        keywords=TWITTER_SEARCH_KEYWORDS,
+    )
+    for t in tweepy.Cursor(api.search, q=query, count=200).items():
+        ts.append(t)
+    return ts
+
+def get_all_tweets_from_collection(screen_name):
+    return [t for t in c.tweets.find({'data.user.screen_name': screen_name}).sort('_id')]
 
 def is_retweeted(tweet):
     if type(tweet) is tweepy.Status:
@@ -234,7 +280,18 @@ def is_retweeted(tweet):
     elif type(tweet) is dict:
         return 'retweeted_status' in tweet['data']
 
-# stub
+def in_regex_text(regex_text):
+    def in_text(tweet):
+        regex = re.compile(regex_text)
+        if type(tweet) is dict:
+            return regex.search(tweet['data']['text'])
+        elif type(tweet) is tweepy.Status:
+            return regex.search(tweet.text)
+    return in_text
+
+in_kinpri_text = in_regex_text(r'KING OF PRISM|キンプリ|キング・?オブ・?プリズム|#kinpri')
+in_pretty_text = in_regex_text(r'プリティーリズム|プリリズ')
+
 def print_week_items(date):
     """
     指定した日付が含まれる週のアイテムをプリントする
@@ -317,3 +374,7 @@ if __name__ == '__main__':
     
     elif args.command == 'retweet':
         retweet_user(args.screen_name)
+
+else:
+    c = MongoClient().kinpri_goods_wiki
+    api = get_api('sakuramochi_pre')
