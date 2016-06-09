@@ -241,8 +241,16 @@ def print_tweet(t):
         print(t.text)
         print('-' * 8)
 
-def get_accounts():
+def get_retweet_target_accounts():
     return sorted(c.tweets.distinct('data.user.screen_name'))
+
+def get_following_accounts():
+    return [u.screen_name for u in api.me().friends()]
+
+def follow_retweet_target_accounts():
+    accounts = set(get_retweet_target_accounts()) - set(get_following_accounts())
+    for account in accounts:
+        api.create_friendship(screen_name=account)        
 
 def get_all_tweets(screen_name):
     ts = []
@@ -304,11 +312,11 @@ if __name__ == '__main__':
         'tweet_today', 'print_today',
         'tweet_tomorrow', 'print_tomorrow',
         'tweet_date', 'print_date',
-        'retweet',
+        'retweet', 'follow',
     ])
     parser.add_argument('--date')
     parser.add_argument('--delta', type=int, default=1)
-    parser.add_argument('--screen_name') # for retweet
+    parser.add_argument('--screen_names', nargs='+')    # for retweet
 
     args = parser.parse_args()
      
@@ -352,7 +360,17 @@ if __name__ == '__main__':
             print_date_items(date)
     
     elif args.command == 'retweet':
-        retweet_user(args.screen_name)
+        if args.screen_names:
+            screen_names = args.screen_names
+        else:
+            with open('retweet_target_screen_names.txt') as f:
+                screen_names = f.read().strip().split()
+
+        for screen_name in screen_names:
+            retweet_user(screen_name)
+
+    elif args.command == 'follow':
+        follow_retweet_target_accounts()
 
 else:
     c = MongoClient().kinpri_goods_wiki
