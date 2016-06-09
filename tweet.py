@@ -9,8 +9,6 @@ from get_tweepy import *
 
 from save_items import print_item
 
-TWITTER_SEARCH_KEYWORDS = '(キンプリ OR "KING OF PRISM" OR キングオブプリズム OR #kinpri OR プリリズ OR プリティーリズム)'
-
 def tweet_date_items(date):
     """
     指定した日付に発売される全アイテムをツイートする
@@ -176,19 +174,10 @@ def print_date_items(date):
 
 # retweet functions
 def retweet_user(screen_name):
-    if screen_name == 'cafegirlinfo':
-        tweets = []
-        for t in api.user_timeline(screen_name=screen_name):
-            if in_kinpri_text(t):
-                tweets.append(t)
-    else:
-        # create search query
-        query = 'from:{screen_name} {keywords}'.format(
-            screen_name=screen_name,
-            keywords=TWITTER_SEARCH_KEYWORDS,
-        )
-        # fetch user's tweets
-        tweets = api.search(q=query, count=100)
+    tweets = []
+    for t in api.user_timeline(screen_name=screen_name, count=50):
+        if in_kinpri_text(t) or in_pretty_text(t):
+            tweets.append(t)
 
     for t in reversed(tweets):
 
@@ -258,16 +247,6 @@ def get_accounts():
 def get_all_tweets(screen_name):
     ts = []
     for t in tweepy.Cursor(api.user_timeline, screen_name=screen_name, count=200).items():
-        ts.append(t)
-    return ts
-
-def get_all_tweets_by_search(screen_name):
-    ts = []
-    query = 'from:{screen_name} {keywords}'.format(
-        screen_name=screen_name,
-        keywords=TWITTER_SEARCH_KEYWORDS,
-    )
-    for t in tweepy.Cursor(api.search, q=query, count=200).items():
         ts.append(t)
     return ts
 
