@@ -174,10 +174,14 @@ def print_date_items(date):
 
 # retweet functions
 def retweet_user(screen_name):
-    tweets = []
-    for t in api.user_timeline(screen_name=screen_name, count=50):
-        if in_kinpri_text(t) or in_pretty_text(t):
-            tweets.append(t)
+    # get all tweets without condition
+    if screen_name == 'PRR_music':
+        tweets = api.user_timeline(screen_name=screen_name)
+    else:
+        tweets = []
+        for t in api.user_timeline(screen_name=screen_name, count=50):
+            if in_kinpri_text(t) or in_pretty_text(t):
+                tweets.append(t)
 
     for t in reversed(tweets):
 
@@ -195,7 +199,11 @@ def retweet_user(screen_name):
                 if args.debug_retweet:
                     api.retweet(doc['_id'])
             else:
-                api.retweet(doc['_id'])
+                try:
+                    api.retweet(doc['_id'])
+                except tweepy.TweepError as e:
+                    if e.api_code == 327: # already retweeted
+                        pass
                 c.tweets.update({'_id': doc['_id']}, {'$set': {'meta.retweeted': True}})
                 time.sleep(1)
 
