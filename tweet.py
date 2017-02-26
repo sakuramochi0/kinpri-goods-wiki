@@ -3,8 +3,10 @@ import re
 import datetime
 import argparse
 import time
+import yaml
+import fcntl
 from dateutil.parser import parse
-from pymongo.mongo_client import MongoClient
+from get_mongo_client import get_mongo_client
 from get_tweepy import *
 
 from save_items import print_item
@@ -329,7 +331,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
      
     # prepare database
-    c = MongoClient().kinpri_goods_wiki
+    c = get_mongo_client().kinpri_goods_wiki
      
     # get tweepy api
     if args.debug:
@@ -381,5 +383,5 @@ if __name__ == '__main__':
         follow_retweet_target_accounts()
 
 else:
-    c = MongoClient().kinpri_goods_wiki
+    c = get_mongo_client().kinpri_goods_wiki
     api = get_api('sakuramochi_pre')

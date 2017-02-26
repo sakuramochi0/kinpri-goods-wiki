@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 import datetime
-from pymongo.mongo_client import MongoClient
+from get_mongo_client import get_mongo_client
 from icalendar import Calendar, Event
 
-cli = MongoClient()
+cli = get_mongo_client()
 c = cli.kinpri_goods_wiki.items
 
 cal = Calendar()

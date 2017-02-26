@@ -1,9 +1,9 @@
 import datetime
 from dateutil.parser import parse
 from urllib.parse import unquote
-from pymongo.mongo_client import MongoClient
+from get_mongo_client import get_mongo_client
 
-cli = MongoClient()
+cli = get_mongo_client()
 c = cli.kinpri_goods_wiki.items
 
 for i in c.find({'date': {'$gte': parse('2015-1-1')}}).sort('date'):

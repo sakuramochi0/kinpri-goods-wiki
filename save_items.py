@@ -7,7 +7,9 @@ import argparse
 from urllib.parse import unquote_plus
 from bs4 import BeautifulSoup
 import requests
-from pymongo.mongo_client import MongoClient
+from get_mongo_client import get_mongo_client
+
+BASE_URL = 'http://kinprigoods.memo.wiki/'
 
 IGNORE_URLS = [
     # 感謝祭前売り券
@@ -135,7 +137,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
      
     # prepare database
-    c = MongoClient()
+    c = get_mongo_client()
     db = c.kinpri_goods_wiki.items
 
     main()
