@@ -16,21 +16,42 @@ IGNORE_URLS = [
     '%a5%ad%a5%f3%a5%d7%a5%ea%a5%d5%a5%a1%a5%f3%b4%b6%bc%d5%ba%d7%c1%b0%c7%e4%a4%ea%a5%b0%a5%c3%a5%ba',
     # ぷりっしゅ
     '%a4%d7%a4%ea%a4%c3%a4%b7%a4%e5',
+    # 発売日リスト
+    '%c8%af%c7%e4%c6%fc%a5%ea%a5%b9%a5%c8',
+    # キャンペーン・期間限定ショップ・イベント販売情報
+    '%a5%ad%a5%e3%a5%f3%a5%da%a1%bc%a5%f3%a1%a6%b4%fc%b4%d6%b8%c2%c4%ea%a5%b7%a5%e7%a5%c3%a5%d7%a1%a6%a5%a4%a5%d9%a5%f3%a5%c8%c8%ce%c7%e4%be%f0%ca%f3',
+    # 同・終了分
+    '%a5%ad%a5%e3%a5%f3%a5%da%a1%bc%a5%f3%a1%a6%b4%fc%b4%d6%b8%c2%c4%ea%a5%b7%a5%e7%a5%c3%a5%d7%a1%a6%a5%a4%a5%d9%a5%f3%a5%c8%c8%ce%c7%e4%be%f0%ca%f3%a1%ca%bd%aa%ce%bb%ca%ac%a1%cb',
 ]
 # prepend a base url
-IGNORE_URLS = list(map(lambda x: 'http://kinprigoods.memo.wiki/d/' + x, IGNORE_URLS))
+IGNORE_URLS = list(map(lambda x: BASE_URL + 'd/' + x, IGNORE_URLS))
 
 def main():
     # get links from menubar
-    url = 'http://kinprigoods.memo.wiki/d/MenuBar1'
-    soup = get_soup(url)
-    urls = [a['href'] for a in soup.select('#content_block_2 li a')[2:]]
+    if args.page == 'all':
+        urls = get_urls_all()
+    elif args.page == 'new':
+        urls = get_urls_new()
+    else:
+        return
     for i, url in enumerate(urls):
         if url in IGNORE_URLS:
             continue
         item = parse_page(url)
         print_item(item, i=i)
         save_item(item)
+
+def get_urls_all():
+    url = BASE_URL + 'd/MenuBar1'
+    soup = get_soup(url)
+    urls = [a['href'] for a in soup.select('#content_block_2 li a')[2:]]
+    return urls
+
+def get_urls_new():
+    url = BASE_URL + 'l/'
+    soup = get_soup(url)
+    urls = [a['href'] for a in soup.select('ul.page-list > li > a')]
+    return urls
 
 def print_item(item, i=None):
     """
@@ -51,7 +72,7 @@ def get_soup(url):
     """
     get BeautifulSoup object of the url page
     """
-    return BeautifulSoup(requests.get(url).text)
+    return BeautifulSoup(requests.get(url).text, 'lxml')
 
 def parse_page(url):
     """
@@ -59,7 +80,6 @@ def parse_page(url):
     """
     item = {}
     soup = get_soup(url)
-    save_html(soup, url)
 
     # get page meta data
     item['url'] = url
@@ -71,11 +91,11 @@ def parse_page(url):
     for div in soup.select('div'):
         if div.has_attr('class'):
             if re.search(r'title-\d', ' '.join(div['class'])):
-                item['name'] = div.text.strip()
+                item['name'] = div.text.strip().replace('　', ' ')
                 break
 
     # get maker name
-    m = re.search(r'(?:発売元|出版社)：(.+)', soup.text)
+    m = re.search(r'(?:発売元|出版社)(?::|：)(\S+)\s*?(?:販売元)?', soup.text)
     if m:
         item['maker'] = m.group(1).replace('株式会社', '').strip()
     else:
@@ -123,17 +143,10 @@ def parse_page(url):
         
     return item
 
-def save_html(soup, url):
-    """
-    save html for cache
-    """
-    with open('html/' + url.split('/')[-1] + '.html', 'w') as f:
-        f.write(soup.prettify())
-    time.sleep(0.5)
-
 if __name__ == '__main__':
     # parse args
     parser = argparse.ArgumentParser()
+    parser.add_argument('page', choices=['all', 'new'])
     args = parser.parse_args()
      
     # prepare database
