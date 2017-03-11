@@ -282,6 +282,8 @@ def retweet_filter(tweet, screen_name):
             return '定期' not in tweet.text
         elif screen_name == 'saku_moca':
             return 'cheese' in tweet.text
+        elif screen_name == 'CafeReoInc':
+            return 'オードトワレ' not in tweet.text
         else:
             return True
     elif in_prismstone_text(tweet):
