@@ -7,6 +7,9 @@ cli = get_mongo_client()
 c = cli.kinpri_goods_wiki.items
 
 cal = Calendar()
+cal['summary'] = 'プリリズ＆キンプリ グッズ発売日カレンダー'
+cal['description'] = '''詳細はこちらのサイトをご覧ください！
+https://skrm.ch/prettyrhythm/calendar/'''
 for i in c.find():
     e = Event()
     if not i['date']:
