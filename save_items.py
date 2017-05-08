@@ -12,19 +12,23 @@ from get_mongo_client import get_mongo_client
 BASE_URL = 'http://kinprigoods.memo.wiki/'
 
 IGNORE_URLS = [
+    # トップページ
+    'd/%a5%c8%a5%c3%a5%d7%a5%da%a1%bc%a5%b8',
+    # タグ検索ページ
+    't/',
     # 感謝祭前売り券
-    '%a5%ad%a5%f3%a5%d7%a5%ea%a5%d5%a5%a1%a5%f3%b4%b6%bc%d5%ba%d7%c1%b0%c7%e4%a4%ea%a5%b0%a5%c3%a5%ba',
+    'd/%a5%ad%a5%f3%a5%d7%a5%ea%a5%d5%a5%a1%a5%f3%b4%b6%bc%d5%ba%d7%c1%b0%c7%e4%a4%ea%a5%b0%a5%c3%a5%ba',
     # ぷりっしゅ
-    '%a4%d7%a4%ea%a4%c3%a4%b7%a4%e5',
+    'd/%a4%d7%a4%ea%a4%c3%a4%b7%a4%e5',
     # 発売日リスト
-    '%c8%af%c7%e4%c6%fc%a5%ea%a5%b9%a5%c8',
+    'd/%c8%af%c7%e4%c6%fc%a5%ea%a5%b9%a5%c8',
     # キャンペーン・期間限定ショップ・イベント販売情報
-    '%a5%ad%a5%e3%a5%f3%a5%da%a1%bc%a5%f3%a1%a6%b4%fc%b4%d6%b8%c2%c4%ea%a5%b7%a5%e7%a5%c3%a5%d7%a1%a6%a5%a4%a5%d9%a5%f3%a5%c8%c8%ce%c7%e4%be%f0%ca%f3',
+    'd/%a5%ad%a5%e3%a5%f3%a5%da%a1%bc%a5%f3%a1%a6%b4%fc%b4%d6%b8%c2%c4%ea%a5%b7%a5%e7%a5%c3%a5%d7%a1%a6%a5%a4%a5%d9%a5%f3%a5%c8%c8%ce%c7%e4%be%f0%ca%f3',
     # 同・終了分
-    '%a5%ad%a5%e3%a5%f3%a5%da%a1%bc%a5%f3%a1%a6%b4%fc%b4%d6%b8%c2%c4%ea%a5%b7%a5%e7%a5%c3%a5%d7%a1%a6%a5%a4%a5%d9%a5%f3%a5%c8%c8%ce%c7%e4%be%f0%ca%f3%a1%ca%bd%aa%ce%bb%ca%ac%a1%cb',
+    'd/%a5%ad%a5%e3%a5%f3%a5%da%a1%bc%a5%f3%a1%a6%b4%fc%b4%d6%b8%c2%c4%ea%a5%b7%a5%e7%a5%c3%a5%d7%a1%a6%a5%a4%a5%d9%a5%f3%a5%c8%c8%ce%c7%e4%be%f0%ca%f3%a1%ca%bd%aa%ce%bb%ca%ac%a1%cb',
 ]
 # prepend a base url
-IGNORE_URLS = list(map(lambda x: BASE_URL + 'd/' + x, IGNORE_URLS))
+IGNORE_URLS = list(map(lambda ignore: BASE_URL + ignore, IGNORE_URLS))
 
 def main():
     # get links from menubar
