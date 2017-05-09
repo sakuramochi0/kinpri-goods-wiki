@@ -55,7 +55,7 @@ for i in c.find():
         summary += '[プリティーリズム]'
     else:
         summary = ''
-        summary += ' ' + i['name']
+    summary += ' ' + i['name']
         
     description = '''{date_extra_description}発売元: {maker}
 タグ: {tags}
