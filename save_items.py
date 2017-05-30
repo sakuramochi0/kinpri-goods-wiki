@@ -14,6 +14,8 @@ BASE_URL = 'http://kinprigoods.memo.wiki/'
 IGNORE_URLS = [
     # トップページ
     'd/%a5%c8%a5%c3%a5%d7%a5%da%a1%bc%a5%b8',
+    # メニューバー
+    'd/MenuBar1',
     # タグ検索ページ
     't/',
     # 感謝祭前売り券
