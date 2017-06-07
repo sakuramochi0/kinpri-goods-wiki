@@ -268,6 +268,7 @@ def retweet_filter(tweet, screen_name):
     if screen_name == 'PRR_music':
         return True
     elif in_kinpri_text(tweet) or in_pretty_text(tweet):
+        # return True if the tweet should be retweeted
         if screen_name == 'magazine_pash':
             return not re.search('人気記事|人気ニュース|週間リツイートランキング|RT→', tweet.text)
         elif screen_name == 'hobby_stock':
@@ -284,6 +285,8 @@ def retweet_filter(tweet, screen_name):
             return 'cheese' in tweet.text
         elif screen_name == 'CafeReoInc':
             return 'オードトワレ' not in tweet.text
+        elif screen_name == 'anime_tsutaya':
+            return '先行販売中！' not in tweet.text
         else:
             return True
     elif in_prismstone_text(tweet):
