@@ -547,7 +547,6 @@ if __name__ == '__main__':
             for screen_name in screen_names:
                 try:
                     retweet_user(screen_name)
-                    time.sleep(10)
                 except tweepy.TweepError as e:
                     if e.api_code == 88:    # Rate limit exceeds
                         print('Rate limit exceeds:')
