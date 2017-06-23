@@ -238,8 +238,6 @@ def retweet_tweets(tweets):
                 if not args.debug_no_tweet:
                     api.retweet(doc['_id'])
             else:
-                # Instead use debug API because of @goods_yamada freezed
-                api = get_api('sakuramochi_pre')
                 try:
                     api.retweet(doc['_id'])
                 except tweepy.TweepError as e:
@@ -287,6 +285,8 @@ def retweet_filter(tweet, screen_name):
             return 'オードトワレ' not in tweet.text
         elif screen_name == 'anime_tsutaya':
             return '先行販売中！' not in tweet.text
+        elif screen_name == 'amiamihobbynews':
+            return '女性向け' not in tweet.text
         else:
             return True
     elif in_prismstone_text(tweet):
