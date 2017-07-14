@@ -284,7 +284,7 @@ def retweet_filter(tweet, screen_name):
         elif screen_name == 'CafeReoInc':
             return 'オードトワレ' not in tweet.text
         elif screen_name == 'anime_tsutaya':
-            return '先行販売中！' not in tweet.text
+            return '販売中' not in tweet.text
         elif screen_name == 'amiamihobbynews':
             return '女性向け' not in tweet.text
         elif screen_name == 'aniaco_info':
