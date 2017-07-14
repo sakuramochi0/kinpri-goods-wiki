@@ -44,6 +44,8 @@ def main():
         if url in IGNORE_URLS:
             continue
         item = parse_page(url)
+        if not item:
+            continue
         print_item(item, i=i)
         save_item(item)
 
@@ -78,7 +80,10 @@ def get_soup(url):
     """
     get BeautifulSoup object of the url page
     """
-    return BeautifulSoup(requests.get(url).text, 'lxml')
+    r = requests.get(url)
+    if not r.ok:
+        return None
+    return BeautifulSoup(r.text, 'lxml')
 
 def parse_page(url):
     """
@@ -86,6 +91,8 @@ def parse_page(url):
     """
     item = {}
     soup = get_soup(url)
+    if not soup:
+        return None
 
     # get page meta data
     item['url'] = url
