@@ -291,6 +291,8 @@ def retweet_filter(tweet, screen_name):
             return '再掲' not in tweet.text and '女性向け' not in tweet.text
         elif screen_name == 'mantanotaku':
             return 'アニメ1週間' not in tweet.text
+        elif screen_name == 'ufotablecinema':
+            return '上映時間' not in tweet.text
         else:
             return True
     elif in_prismstone_text(tweet):
