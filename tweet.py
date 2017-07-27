@@ -5,6 +5,8 @@ import argparse
 import time
 import yaml
 import fcntl
+import requests
+from bs4 import BeautifulSoup
 from dateutil.parser import parse
 from get_mongo_client import get_mongo_client
 from get_tweepy import *
@@ -293,6 +295,14 @@ def retweet_filter(tweet, screen_name):
             return 'アニメ1週間' not in tweet.text
         elif screen_name == 'ufotablecinema':
             return '上映時間' not in tweet.text
+        elif screen_name == 'news_mynavi_jp':
+            urls = [url['expanded_url'] for url in tweet.entities['urls']]
+            url = urls[0]
+            r = requests.get(url)
+            r.encoding = 'utf-8'
+            s = BeautifulSoup(r.text, 'lxml')
+            publisher = s.select('[itemprop="publisher"]')[0]['content']
+            return 'まんたん' not in publisher
         else:
             return True
     elif in_prismstone_text(tweet):
