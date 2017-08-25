@@ -40,7 +40,7 @@ def tweet_date_items(date):
                         r'\s*?[\(（].+[\)）]',
                         '',
                         item['maker']
-                    ).strip()
+                    ).replace('(ムービック)', '').strip()
                 try:
                     print(item_status)
                     res = tweet(item_status)
