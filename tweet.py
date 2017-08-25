@@ -157,12 +157,11 @@ def make_item_status(item=None, date=None):
         maker = ''
         
     # make status text
-    status = '{date_description}{date}は{maker}「{name}」が発売されるようだ。詳しくはこれ見とけ〜 {url}{quote}'.format(
+    status = '{date_description}{date}は{maker}「{name}」が発売されるようだ。詳しくはこれ見とけ〜 {quote}'.format(
         date_description=get_date_description(date),
         date=format_date(date),
         maker=maker,
         name=item['name'],
-        url=item['url'],
         quote=quote,
     )
     return status
