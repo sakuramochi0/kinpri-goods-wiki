@@ -247,6 +247,7 @@ def retweet_tweets(tweets):
                     else:
                         raise
                 c.tweets.update_one({'_id': doc['_id']}, {'$set': {'meta.retweeted': True}})
+                set_latest_retweet_date()
                 time.sleep(1)
 
 def retweet_ids(ids):
@@ -264,6 +265,8 @@ def retweet_ids(ids):
 
 def retweet_filter(tweet, screen_name):
     """Return True if the tweet should be retweeted, False if not."""
+    if tweet.created_at.date() < latest_retweet_date - datetime.timedelta(days=1):
+        return False
     if screen_name == 'PRR_music':
         return True
     elif in_kinpri_text(tweet) or in_pretty_text(tweet):
@@ -411,6 +414,18 @@ def remove_retweet_target_account(screen_name):
         fcntl.flock(f)
         yaml.dump(screen_names, f, width=5)
 
+def get_latest_retweet_date():
+    with open('latest_retweet_date.yaml') as f:
+        fcntl.flock(f, fcntl.LOCK_SH)
+        date = yaml.load(f)
+    return date
+
+def set_latest_retweet_date():
+    date = datetime.date.today() - datetime.timedelta(days=1)
+    with open('latest_retweet_date.yaml', 'w') as f:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        yaml.dump(date, f)
+
 def get_following_accounts():
     return [u.screen_name for u in api.me().friends()]
 
@@ -551,6 +566,7 @@ if __name__ == '__main__':
             print_date_items(date)
     
     elif args.command == 'retweet':
+        latest_retweet_date = get_latest_retweet_date()
         if args.ids:
             ids = remove_twitter_prefix(args.ids)
             retweet_ids(ids)
