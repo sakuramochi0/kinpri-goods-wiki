@@ -75,7 +75,6 @@ def tweet(status, imgs=[]):
     """
     指定したツイートテキストで、アカウントからツイートする
     """
-    # TODO: imgs can be list?
     if imgs:
         pass
     #     api.update_with_media(status=status, filename=imgs)
