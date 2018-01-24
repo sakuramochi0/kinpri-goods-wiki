@@ -304,6 +304,8 @@ def retweet_filter(tweet, screen_name):
             s = BeautifulSoup(r.text, 'lxml')
             publisher = s.select('[itemprop="publisher"]')[0]['content']
             return 'まんたん' not in publisher
+        elif screen_name == 'TOWER_Shinjuku':
+            return 'prince' not in tweet.text.lower()
         else:
             return True
     elif in_prismstone_text(tweet):
