@@ -74,23 +74,19 @@ def tweet_date_items(date):
                 pass
 
 
-def tweet(status, imgs=[]):
+def tweet(status):
     """
     指定したツイートテキストで、アカウントからツイートする
     """
-    if imgs:
-        pass
-    #     api.update_with_media(status=status, filename=imgs)
-    else:
-        print('-' * 4)
-        print('tweeting:')
-        print(status)
-        print('({})'.format(status_len(status)))
-        res = api.update_status(status=status, tweet_mode='extended')
-        res = assign_full_text_to_text(res)
-        if not args.debug:
-            time.sleep(10)
-        return res
+    print('-' * 4)
+    print('tweeting:')
+    print(status)
+    print('({})'.format(status_len(status)))
+    res = api.update_status(status=status, tweet_mode='extended')
+    res = assign_full_text_to_text(res)
+    if not args.debug:
+        time.sleep(10)
+    return res
 
 
 def status_len(status):
