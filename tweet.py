@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
-import re
-import datetime
 import argparse
-import time
-import yaml
+import datetime
 import fcntl
+import re
+import time
+
 import requests
+import yaml
 from bs4 import BeautifulSoup
 from dateutil.parser import parse
 from get_mongo_client import get_mongo_client
 from get_tweepy import *
 
 from save_items import print_item
+
 
 def tweet_date_items(date):
     """
@@ -20,7 +22,7 @@ def tweet_date_items(date):
     # tweet item number of the date
     num_status = make_num_status(date=date)
     if args.debug_no_tweet:
-        print('status:', num_status) 
+        print('status:', num_status)
     else:
         tweet(num_status)
 
@@ -30,7 +32,7 @@ def tweet_date_items(date):
         try:
             item_status = make_item_status(date=date, item=item)
             if args.debug_no_tweet:
-                print('status:', item_status) 
+                print('status:', item_status)
                 continue
             res = tweet(item_status)
         except tweepy.TweepError as e:
@@ -65,11 +67,12 @@ def tweet_date_items(date):
                                 res = tweet(item_status)
 
         try:
-            print('res:' , res)
+            print('res:', res)
             api.create_favorite(id=res.id)
         except tweepy.TweepError as e:
             if e.api_code == 139:
                 pass
+
 
 def tweet(status, imgs=[]):
     """
@@ -89,12 +92,14 @@ def tweet(status, imgs=[]):
             time.sleep(10)
         return res
 
+
 def status_len(status):
     dummy_url = 'https://t.co/xxxxxxxxxx'
     url_regex = re.compile(r'http\S+')
     status = re.sub(url_regex, dummy_url, status)
     return len(status)
-            
+
+
 def make_num_status(date=None):
     """
     ツイート用に、指定した日付に発売するアイテム数を知らせるツイートテキストを生成する
@@ -133,6 +138,7 @@ def make_num_status(date=None):
 
     return status
 
+
 def make_item_status(item=None, date=None):
     """
     ツイート用に、指定したアイテムや日付から、アイテムの紹介ツイートテキストを生成する
@@ -154,7 +160,7 @@ def make_item_status(item=None, date=None):
         maker = item['maker'] + 'さんから'
     else:
         maker = ''
-        
+
     # make status text
     status = '{date_description}{date}は{maker}「{name}」が発売されるようだ。詳しくはこれ見とけ〜 {quote}'.format(
         date_description=get_date_description(date),
@@ -164,6 +170,7 @@ def make_item_status(item=None, date=None):
         quote=quote,
     )
     return status
+
 
 def get_date_description(date):
     delta = (date.date() - datetime.date.today()).days
@@ -177,6 +184,7 @@ def get_date_description(date):
         date_description = ''
     return date_description
 
+
 def format_date(date):
     """
     ツイート用に、日付を「1月1日(月)」のフォーマットに整形する
@@ -186,7 +194,8 @@ def format_date(date):
     # 月と日の0埋めを消す e.g.「01月」->「1月」
     datestr = re.sub(r'0(\d)(月|日)', r'\1\2', datestr)
     return datestr
-    
+
+
 def get_date(delta=0, date=''):
     """
     今日からの日数、または、文字列で指定した日付のdatetimeオブジェクトを返す
@@ -198,6 +207,7 @@ def get_date(delta=0, date=''):
         date = today + datetime.timedelta(days=delta)
     return parse(date.strftime('%Y-%m-%d'))
 
+
 def print_date_items(date):
     """
     指定した日付のアイテムをプリントする
@@ -206,6 +216,7 @@ def print_date_items(date):
     print('date:{} / item: {}'.format(date.date(), items.count()))
     for item in items:
         print_item(item)
+
 
 # retweet functions
 def retweet_user(screen_name):
@@ -220,7 +231,8 @@ def retweet_user(screen_name):
         if retweet_filter(t, screen_name):
             tweets.append(t)
     retweet_tweets(tweets)
-            
+
+
 def retweet_tweets(tweets):
     for t in tweets:
         # if new tweet, insert to database
@@ -229,7 +241,7 @@ def retweet_tweets(tweets):
             doc = make_doc(t)
             if not args.debug:
                 c.tweets.insert_one(doc)
-        
+
         # if not retweeted, do it and record to database
         if not doc['meta']['retweeted'] and not is_retweeted(doc):
             if args.debug:
@@ -241,7 +253,7 @@ def retweet_tweets(tweets):
                 try:
                     api.retweet(doc['_id'])
                 except tweepy.TweepError as e:
-                    if e.api_code == 327: # already retweeted
+                    if e.api_code == 327:  # already retweeted
                         pass
                     else:
                         raise
@@ -249,18 +261,20 @@ def retweet_tweets(tweets):
                 set_latest_retweet_date()
                 time.sleep(1)
 
+
 def retweet_ids(ids):
     ts = []
     for id in ids:
         try:
             ts.append(api.get_status(id=id, tweet_mode='extended'))
         except TweepError as e:
-            if e.api_code == 144: # not found status_id
+            if e.api_code == 144:  # not found status_id
                 pass
             else:
                 raise
     ts = assign_full_text_to_text_list(ts)
     retweet_tweets(ts)
+
 
 def retweet_filter(tweet, screen_name):
     """Return True if the tweet should be retweeted, False if not."""
@@ -313,6 +327,7 @@ def retweet_filter(tweet, screen_name):
     else:
         return False
 
+
 def run_command_from_tos():
     ts = api.search('from:{sn} @tos'.format(sn=api.auth.username), tweet_mode='extended')
     ts = assign_full_text_to_text_list(ts)
@@ -347,7 +362,8 @@ def run_command_from_tos():
                     print('Success to add new account to retweet target account list')
                     print('\tTarget account:', target)
                 t.destroy()
-    
+
+
 # utility functions
 
 def make_doc(tweet, retweeted=False):
@@ -357,10 +373,12 @@ def make_doc(tweet, retweeted=False):
     doc['data'] = tweet._json
     return doc
 
+
 def add_collection(tweet, retweeted=False):
     doc = make_doc(tweet, retweeted)
     return c.tweets.replace_one({'_id': doc['_id']}, doc, upsert=True)
-    
+
+
 def print_tweet(t):
     if type(t) is dict:
         tweet_url = 'https://twitter.com/{name}/status/{id}'.format(
@@ -390,30 +408,34 @@ def print_tweet(t):
         print(t.text)
         print('-' * 8)
 
+
 def get_retweet_target_accounts():
     with open('retweet_target_screen_names.yaml') as f:
         screen_names = yaml.load(f)
     return screen_names
+
 
 def add_retweet_target_account(screen_name):
     with open('retweet_target_screen_names.yaml') as f:
         fcntl.flock(f)
         screen_names = yaml.load(f)
     screen_names.append(screen_name)
-    
+
     with open('retweet_target_screen_names.yaml', 'w') as f:
         fcntl.flock(f)
         yaml.dump(screen_names, f, width=5)
+
 
 def remove_retweet_target_account(screen_name):
     with open('retweet_target_screen_names.yaml') as f:
         fcntl.flock(f)
         screen_names = yaml.load(f)
     screen_names.remove(screen_name)
-    
+
     with open('retweet_target_screen_names.yaml', 'w') as f:
         fcntl.flock(f)
         yaml.dump(screen_names, f, width=5)
+
 
 def get_latest_retweet_date():
     with open('latest_retweet_date.yaml') as f:
@@ -421,14 +443,17 @@ def get_latest_retweet_date():
         date = yaml.load(f)
     return date
 
+
 def set_latest_retweet_date():
     date = datetime.date.today() - datetime.timedelta(days=1)
     with open('latest_retweet_date.yaml', 'w') as f:
         fcntl.flock(f, fcntl.LOCK_EX)
         yaml.dump(date, f)
 
+
 def get_following_accounts():
     return [u.screen_name for u in api.me().friends()]
+
 
 def follow_retweet_target_accounts():
     accounts = set(get_retweet_target_accounts()) - set(get_following_accounts())
@@ -438,6 +463,7 @@ def follow_retweet_target_accounts():
         except tweepy.TweepError as e:
             print(e)
 
+
 def get_all_tweets(screen_name):
     ts = []
     for t in tweepy.Cursor(api.user_timeline, screen_name=screen_name, count=200, tweet_mode='extended').items():
@@ -445,14 +471,17 @@ def get_all_tweets(screen_name):
     ts = assign_full_text_to_text_list(ts)
     return ts
 
+
 def get_all_tweets_from_collection(screen_name):
     return [t for t in c.tweets.find({'data.user.screen_name': screen_name}).sort('_id')]
+
 
 def is_retweeted(tweet):
     if type(tweet) is tweepy.Status:
         return 'retweeted_status' in tweet._json
     elif type(tweet) is dict:
         return 'retweeted_status' in tweet['data']
+
 
 def in_regex_text(regex_text):
     def in_text(tweet):
@@ -462,12 +491,15 @@ def in_regex_text(regex_text):
         elif type(tweet) is tweepy.Status:
             text = tweet.text.lower()
         return regex.search(text)
+
     return in_text
+
 
 in_kinpri_text = in_regex_text(r'king ?of ?prism|キンプリ|キング・?オブ・?プリズム\
 |kinpri|エーデルローズ|シュワルツローズ')
-in_pretty_text = in_regex_text(r'プリティーリズム|プリリズ|prettyrhythm|オーロラドリーム|ディアマイフューチャー|レインボーライブ|オールフレンズ')
+in_pretty_text = in_regex_text(r'プリティーリズム|プリリズ|prettyrhythm|オーロラドリーム|ディアマイフューチャー|レインボーライブ|オールフレンズ|prettyall')
 in_prismstone_text = in_regex_text(r'プリズムストーン|prismstone')
+
 
 def print_week_items(date):
     """
@@ -477,12 +509,14 @@ def print_week_items(date):
     print('{} item:'.format(date), items.count())
     for item in items:
         print_item(item)
-        
+
+
 def get_date_items(date):
     """
     指定した日付に発売するアイテムのCursorを返す
     """
     return get_dates_items(date, date)
+
 
 def get_dates_items(start_date, end_date):
     """
@@ -490,20 +524,24 @@ def get_dates_items(start_date, end_date):
     """
     return c.items.find({'date': {'$gte': start_date, '$lte': end_date}, 'date_extra': None})
 
+
 def remove_twitter_prefix(ids):
     """Remove 'https://twitter.com/...' if exists."""
     return map(lambda x: x.split('/')[-1], ids)
+
 
 def assign_full_text_to_text_list(ts):
     """Copy full_text attribute to text for tweet list."""
     ts = list(map(assign_full_text_to_text, ts))
     return ts
 
-def assign_full_text_to_text(t):
+
+def assign_full_text_to_text(t: tweepy.Status):
     """Copy full_text attribute to text."""
     t.text = t.full_text
     t._json['text'] = t._json['full_text']
     return t
+
 
 if __name__ == '__main__':
     # parse args
@@ -512,7 +550,7 @@ if __name__ == '__main__':
     # for debug
     parser.add_argument('-d', '--debug', action='store_true')
     parser.add_argument('--debug-no-tweet', action='store_true')
-    
+
     parser.add_argument('command', type=str, choices=[
         'tweet_today', 'print_today',
         'tweet_tomorrow', 'print_tomorrow',
@@ -522,14 +560,14 @@ if __name__ == '__main__':
     ])
     parser.add_argument('--date')
     parser.add_argument('--delta', type=int, default=1)
-    parser.add_argument('--screen_names', nargs='+')    # for retweet
-    parser.add_argument('--ids', nargs='+')    # for retweet
+    parser.add_argument('--screen_names', nargs='+')  # for retweet
+    parser.add_argument('--ids', nargs='+')  # for retweet
 
     args = parser.parse_args()
-     
+
     # prepare database
     c = get_mongo_client().kinpri_goods_wiki
-     
+
     # get tweepy api
     if args.debug:
         api = get_api('sakuramochi_pre')
@@ -537,7 +575,7 @@ if __name__ == '__main__':
         api = get_api('goods_yamada')
 
     # run command
-    
+
     # today
     if args.command == 'tweet_today':
         tweet_date_items(get_date())
@@ -565,7 +603,7 @@ if __name__ == '__main__':
             tweet_date_items(date)
         elif args.command == 'print_date':
             print_date_items(date)
-    
+
     elif args.command == 'retweet':
         latest_retweet_date = get_latest_retweet_date()
         if args.ids:
@@ -580,7 +618,7 @@ if __name__ == '__main__':
                 try:
                     retweet_user(screen_name)
                 except tweepy.TweepError as e:
-                    if e.api_code == 88:    # Rate limit exceeds
+                    if e.api_code == 88:  # Rate limit exceeds
                         print('Rate limit exceeds:')
                         print(api.rate_limit_status())
                         break
@@ -591,7 +629,7 @@ if __name__ == '__main__':
 
     elif args.command == 'follow':
         follow_retweet_target_accounts()
-        
+
     elif args.command == 'run_command_from_tos':
         run_command_from_tos()
 else:
