@@ -284,7 +284,7 @@ def retweet_filter(tweet, screen_name):
             return not re.search('人気記事|人気ニュース|週間リツイートランキング|RT→', tweet.text)
         elif screen_name == 'hobby_stock':
             return '【再販】' not in tweet.text
-        elif screen_name == 'animate_cafe':
+        elif screen_name in ['animate_cafe', 'animatecafe_grt']:
             return '空席分のご予約' not in tweet.text
         elif screen_name == 'Kotobukiya_akb':
             return '在庫' not in tweet.text and '入荷' not in tweet.text
