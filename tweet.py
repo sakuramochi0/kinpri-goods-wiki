@@ -6,11 +6,13 @@ import re
 import time
 
 import requests
+import tweepy
 import yaml
 from bs4 import BeautifulSoup
 from dateutil.parser import parse
 from get_mongo_client import get_mongo_client
-from get_tweepy import *
+from get_tweepy import get_api
+from tweepy import TweepError
 
 from save_items import print_item
 
@@ -29,22 +31,21 @@ def tweet_date_items(date):
     # tweet items
     items = get_date_items(date)
     for item in items:
+        item_status = make_item_status(date=date, item=item)
+        if args.debug_no_tweet:
+            print('status:', item_status)
+            continue
         try:
-            item_status = make_item_status(date=date, item=item)
-            if args.debug_no_tweet:
-                print('status:', item_status)
-                continue
             res = tweet(item_status)
         except tweepy.TweepError as e:
             if e.api_code == 186:
                 if item['maker']:
                     item['maker'] = re.sub(
-                        r'\s*?[\(（].+[\)）]',
+                        r'\s*?[(（].+[)）]',
                         '',
                         item['maker']
                     ).strip()
                 try:
-                    print(item_status)
                     res = tweet(item_status)
                 except tweepy.TweepError as e:
                     if e.api_code == 186:
@@ -67,7 +68,6 @@ def tweet_date_items(date):
                                 res = tweet(item_status)
 
         try:
-            print('res:', res)
             api.create_favorite(id=res.id)
         except tweepy.TweepError as e:
             if e.api_code == 139:
@@ -78,10 +78,6 @@ def tweet(status):
     """
     指定したツイートテキストで、アカウントからツイートする
     """
-    print('-' * 4)
-    print('tweeting:')
-    print(status)
-    print('({})'.format(status_len(status)))
     res = api.update_status(status=status, tweet_mode='extended')
     res = assign_full_text_to_text(res)
     if not args.debug:
@@ -108,7 +104,6 @@ def make_num_status(date=None):
 
     # tweet a number of items
     num = c.items.find({'date': date, 'date_extra': None}).count()
-    print([i['name'] for i in c.items.find({'date': date, 'date_extra': None})])
     if num:
         status = 'みんな〜、{date_description}{date}は{num}個のグッズが発売されるみたいだぞー。これから紹介するな〜。'.format(
             date_description=get_date_description(date), date=format_date(date), num=num
@@ -185,14 +180,15 @@ def format_date(date):
     """
     ツイート用に、日付を「1月1日(月)」のフォーマットに整形する
     """
-    weekday = str(date.weekday()).translate(dict([(ord(n), day) for n, day in zip('0123456', '月火水木金土日')]))
+    weekday = str(date.weekday()).translate(
+        dict([(ord(n), day) for n, day in zip('0123456', '月火水木金土日')]))
     datestr = date.strftime('%m月%d日({weekday})'.format(weekday=weekday))
     # 月と日の0埋めを消す e.g.「01月」->「1月」
-    datestr = re.sub(r'0(\d)(月|日)', r'\1\2', datestr)
+    datestr = re.sub(r'0(\d)([月日])', r'\1\2', datestr)
     return datestr
 
 
-def get_date(delta=0, date=''):
+def get_date(delta: int = 0, date: str = '') -> datetime.datetime:
     """
     今日からの日数、または、文字列で指定した日付のdatetimeオブジェクトを返す
     """
@@ -223,9 +219,9 @@ def retweet_user(screen_name):
         ts = assign_full_text_to_text_list(ts)
     except tweepy.TweepError as e:
         raise
-    for t in reversed(ts):
-        if retweet_filter(t, screen_name):
-            tweets.append(t)
+    for tweet in reversed(ts):
+        if should_be_retweeted(tweet, screen_name):
+            tweets.append(tweet)
     retweet_tweets(tweets)
 
 
@@ -272,7 +268,7 @@ def retweet_ids(ids):
     retweet_tweets(ts)
 
 
-def retweet_filter(tweet, screen_name):
+def should_be_retweeted(tweet, screen_name):
     """Return True if the tweet should be retweeted, False if not."""
     if tweet.created_at.date() < latest_retweet_date - datetime.timedelta(days=1):
         return False
@@ -324,42 +320,6 @@ def retweet_filter(tweet, screen_name):
         return False
 
 
-def run_command_from_tos():
-    ts = api.search('from:{sn} @tos'.format(sn=api.auth.username), tweet_mode='extended')
-    ts = assign_full_text_to_text_list(ts)
-    for t in ts:
-        if t.text.startswith('@tos'):
-            raw_args = t.text.replace('@tos', '').strip().split()
-            parser = argparse.ArgumentParser()
-            parser.add_argument('command')
-            parser.add_argument('targets', nargs='+')
-            args = parser.parse_args(raw_args)
-            args.command = args.command.lower()
-            if args.command == 'rt':
-                ids = []
-                urls = [url['expanded_url'] for url in t.entities['urls']]
-                for url in urls:
-                    m = re.search(r'(?:https?://.+/)?(\d+)', url)
-                    if m:
-                        ids.append(m.group(1))
-                if ids:
-                    retweet_ids(ids)
-                t.destroy()
-            elif args.command == 'follow':
-                for target in args.targets:
-                    try:
-                        u = api.get_user(screen_name=target)
-                    except tweepy.TweepError as e:
-                        print('Failed to follow account from tweet command')
-                        print('\tTarget account:', target)
-                        print('\tError:')
-                        print(e)
-                    add_retweet_target_account(target)
-                    print('Success to add new account to retweet target account list')
-                    print('\tTarget account:', target)
-                t.destroy()
-
-
 # utility functions
 
 def make_doc(tweet, retweeted=False):
@@ -385,12 +345,13 @@ def print_tweet(t):
             retweeted = ' *'
         else:
             retweeted = ''
-        print(t['meta']['time'], '/ ♡ {} ↻ {}{retweeted} / {}'.format(
-            t['data']['favorite_count'],
-            t['data']['retweet_count'],
-            tweet_url,
-            retweeted=retweeted,
-        ))
+        print(t['meta']['time'],
+              '/ ♡ {favorite_count} ↻ {retweet_count}{retweeted} / {tweet_url}'.format(
+                  favorite_count=t['data']['favorite_count'],
+                  retweet_count=t['data']['retweet_count'],
+                  tweet_url=tweet_url,
+                  retweeted=retweeted,
+              ))
         print('{}(@{})'.format(t['data']['user']['name'], t['data']['user']['screen_name']))
         print(t['data']['text'])
         print('-' * 8)
@@ -462,7 +423,8 @@ def follow_retweet_target_accounts():
 
 def get_all_tweets(screen_name):
     ts = []
-    for t in tweepy.Cursor(api.user_timeline, screen_name=screen_name, count=200, tweet_mode='extended').items():
+    for t in tweepy.Cursor(api.user_timeline, screen_name=screen_name, count=200,
+                           tweet_mode='extended').items():
         ts.append(t)
     ts = assign_full_text_to_text_list(ts)
     return ts
@@ -486,6 +448,8 @@ def in_regex_text(regex_text):
             text = tweet['data']['text'].lower()
         elif type(tweet) is tweepy.Status:
             text = tweet.text.lower()
+        else:
+            text = ''
         return regex.search(text)
 
     return in_text
@@ -493,7 +457,8 @@ def in_regex_text(regex_text):
 
 in_kinpri_text = in_regex_text(r'king ?of ?prism|キンプリ|キング・?オブ・?プリズム\
 |kinpri|エーデルローズ|シュワルツローズ')
-in_pretty_text = in_regex_text(r'プリティーリズム|プリリズ|prettyrhythm|オーロラドリーム|ディアマイフューチャー|レインボーライブ|オールフレンズ|prettyall')
+in_pretty_text = in_regex_text(
+    r'プリティーリズム|プリリズ|prettyrhythm|オーロラドリーム|ディアマイフューチャー|レインボーライブ|オールフレンズ|prettyall')
 in_prismstone_text = in_regex_text(r'プリズムストーン|prismstone')
 
 
@@ -593,6 +558,8 @@ if __name__ == '__main__':
             date = get_date(date=args.date)
         elif args.delta is not None:
             date = get_date(delta=args.delta)
+        else:
+            date = None
 
         # run command
         if args.command == 'tweet_date':
@@ -625,9 +592,6 @@ if __name__ == '__main__':
 
     elif args.command == 'follow':
         follow_retweet_target_accounts()
-
-    elif args.command == 'run_command_from_tos':
-        run_command_from_tos()
 else:
     c = get_mongo_client().kinpri_goods_wiki
     api = get_api('sakuramochi_pre')
