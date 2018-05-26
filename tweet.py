@@ -311,7 +311,7 @@ def should_be_retweeted(tweet, screen_name):
             publisher = s.select('[itemprop="publisher"]')[0]['content']
             return 'まんたん' not in publisher
         elif screen_name == 'TOWER_Shinjuku':
-            return 'prince' not in tweet.text.lower()
+            return 'prince' not in tweet.text.lower() and 'ジャニーズ' not in tweet.text
         else:
             return True
     elif in_prismstone_text(tweet):
