@@ -4,3 +4,4 @@
   - git:
       repo: https://github.com/sakuramochi0/kinpri-goods-wiki.git
       dest: ~/src/kinpri-goods-wiki/
+      force: yes
