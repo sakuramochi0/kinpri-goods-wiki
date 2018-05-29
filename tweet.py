@@ -275,12 +275,11 @@ def should_be_retweeted(tweet, screen_name):
     if screen_name == 'PRR_music':
         return True
     elif in_kinpri_text(tweet) or in_pretty_text(tweet):
-        # return True if the tweet should be retweeted
         if screen_name == 'magazine_pash':
             return not re.search('人気記事|人気ニュース|週間リツイートランキング|RT→', tweet.text)
         elif screen_name == 'hobby_stock':
             return '【再販】' not in tweet.text
-        elif screen_name in ['animate_cafe', 'animatecafe_grt']:
+        elif 'animate' in screen_name:
             return '空席分のご予約' not in tweet.text
         elif screen_name == 'Kotobukiya_akb':
             return '在庫' not in tweet.text and '入荷' not in tweet.text
