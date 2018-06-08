@@ -455,7 +455,7 @@ def in_regex_text(regex_text):
 
 
 in_kinpri_text = in_regex_text(r'king ?of ?prism|キンプリ|キング・?オブ・?プリズム\
-|kinpri|エーデルローズ|シュワルツローズ')
+|kinpri|エーデルローズ|シュワルツローズ|やんぷり')
 in_pretty_text = in_regex_text(
     r'プリティーリズム|プリリズ|prettyrhythm|オーロラドリーム|ディアマイフューチャー|レインボーライブ|オールフレンズ|prettyall')
 in_prismstone_text = in_regex_text(r'プリズムストーン|prismstone')
