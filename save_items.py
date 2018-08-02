@@ -90,7 +90,10 @@ def parse_page(url):
     analyze the url page and return informations
     """
     item = {}
-    soup = get_soup(url)
+    try:
+        soup = get_soup(url)
+    except:
+        return None
     if not soup:
         return None
 
@@ -115,7 +118,7 @@ def parse_page(url):
         item['maker'] = None
 
     # get tweet ids
-    item['tweet_urls'] = [t.select('a')[-1]['href'] for t in soup.select('.embedded-tweet')]
+    item['tweet_urls'] = [t.select('a')[-1]['href'] for t in soup.select('.embedded-tweet') if t.select('a')]
         
     # remove embeded tweets
     for div in soup.select('.embedded-tweet'):
