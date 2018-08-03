@@ -1,5 +1,5 @@
 ---
-- hosts: rinne
+- hosts: june
   tasks:
   - git:
       repo: https://github.com/sakuramochi0/kinpri-goods-wiki.git
