@@ -282,8 +282,7 @@ def should_be_retweeted(tweet, screen_name):
         elif 'animate' in screen_name:
             return '予約' not in tweet.text \
                    and 'ご来店をお待ちしております' not in tweet.text \
-                   and 'コラボ開催中' not in tweet.text \
-                   and 'pic' in tweet.text
+                   and 'コラボ開催中' not in tweet.text
         elif screen_name == 'Kotobukiya_akb':
             return '在庫' not in tweet.text and '入荷' not in tweet.text
         elif screen_name == 'animegainfo':
