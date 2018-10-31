@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks:
+  - name: save new items from wiki
+    command: pipenv run python save_items.py new
+    args:
+      chdir: ~/src/kinpri-goods-wiki
+  - name: tweet today's items
+    command: pipenv run python tweet.py tweet_today
+    args:
+      chdir: ~/src/kinpri-goods-wiki
+      
