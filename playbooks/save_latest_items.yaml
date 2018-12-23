@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+  - name: save new items from wiki
+    command: pipenv run python save_items.py new
+    args:
+      chdir: ~/src/kinpri-goods-wiki
