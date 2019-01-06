@@ -114,12 +114,9 @@ def make_num_status(date=None):
             next_item = future_items[0]
             next_date = next_item['date']
             next_num = c.items.find({'date': next_date, 'date_extra': None}).count()
-            status = '{date_description}{date}は、特にグッズは発売されないみたいだな〜。次は{next_date_description}{next_date}に、{next_num}個のグッズが発売されるようだ。'.format(
-                date_description=get_date_description(date),
-                date=format_date(date),
-                next_date_description=get_date_description(next_date),
-                next_date=format_date(next_date),
-                next_num=next_num,
+            status = (
+                f'{get_date_description(date)}{format_date(date)}は、特にグッズは発売されないみたいだな〜。'
+                f'次は{get_date_description(next_date)}{format_date(next_date)}に、{next_num}個のグッズが発売されるようだ。'
             )
         else:
             status = '今のところ、{date_description}{date}以降に発売する予定のグッズはないみたいだ。次を楽しみにしようなー。'.format(
